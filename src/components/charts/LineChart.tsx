@@ -49,6 +49,7 @@ export function LineChart({ categories, data, title, height = 350 }: LineChartPr
             option={option}
             style={{ height, width: '100%' }}
             opts={{ renderer: 'svg' }}
+            notMerge={true}
         />
     );
 }

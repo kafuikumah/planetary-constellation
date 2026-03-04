@@ -62,6 +62,7 @@ export function RadarChart({ data, compareData, title, height = 350 }: RadarChar
             option={option}
             style={{ height, width: '100%' }}
             opts={{ renderer: 'svg' }}
+            notMerge={true}
         />
     );
 }

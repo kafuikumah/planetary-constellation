@@ -11,6 +11,7 @@ import { CountryFlag } from '@/components/shared/CountryFlag';
 import { ScoreBadge } from '@/components/shared/ScoreBadge';
 import { calculateOverallScore, cn, getScoreColor } from '@/lib/utils';
 import { PageLayout } from '@/components/layout/PageLayout';
+import { Check, X, BarChart2 } from 'lucide-react';
 
 const allCountries = getAllCountriesAlphabetical();
 
@@ -99,27 +100,12 @@ export default function ComparisonPage() {
                     >
                         <CountryFlag code={c.code} name={c.name} />
                         <span className="truncate">{c.name}</span>
+                        {selectedIds.includes(c.id) && <Check className="w-4 h-4 text-orange-500 ml-auto flex-shrink-0" />}
                     </button>
                 ))}
             </div>
 
-            <div className="mt-4 pt-4 border-t border-slate-100">
-                <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-400 mb-3 block">Chart Type</p>
-                <div className="flex flex-col gap-2">
-                    {(['bar', 'radar', 'line'] as ChartType[]).map(t => (
-                        <button
-                            key={t}
-                            onClick={() => setChartType(t)}
-                            className={cn(
-                                'px-4 py-2 rounded-lg text-sm font-medium transition-colors capitalize text-left',
-                                chartType === t ? 'bg-orange-500 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                            )}
-                        >
-                            {t} Chart
-                        </button>
-                    ))}
-                </div>
-            </div>
+
         </aside>
     );
 
@@ -127,17 +113,60 @@ export default function ComparisonPage() {
         <PageLayout sidebar={sidebar}>
             <div className="p-6 space-y-6">
                 {/* Header */}
-                <div>
-                    <h1 className="text-xl font-bold text-slate-900">Comparison Matrix</h1>
-                    <p className="text-sm text-slate-500 mt-1">Compare health system performance across multiple countries</p>
+                {/* Header and Controls */}
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div>
+                        <h1 className="text-xl font-bold text-slate-900">Comparison Matrix</h1>
+                        <p className="text-sm text-slate-500 mt-1">Compare health system performance across multiple countries</p>
+                    </div>
+                    {/* Chart Type Toggle */}
+                    <div className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
+                        {(['bar', 'radar', 'line'] as ChartType[]).map(t => (
+                            <button
+                                key={t}
+                                onClick={() => setChartType(t)}
+                                className={cn(
+                                    'px-4 py-1.5 rounded-md text-sm font-medium transition-colors capitalize',
+                                    chartType === t ? 'bg-white text-orange-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                                )}
+                            >
+                                {t}
+                            </button>
+                        ))}
+                    </div>
                 </div>
+
+                {/* Selected Countries Bubbles */}
+                {selectedCountries.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                        {selectedCountries.map(c => (
+                            <div key={c.id} className="flex items-center gap-1.5 bg-orange-50 border border-orange-200 px-3 py-1.5 rounded-full text-sm">
+                                <CountryFlag code={c.code} name={c.name} />
+                                <span className="font-medium text-slate-800">{c.name}</span>
+                                <button
+                                    onClick={() => toggleCountry(c.id)}
+                                    className="ml-1 text-slate-400 hover:text-orange-600 transition-colors p-0.5 rounded-full hover:bg-orange-100 focus:outline-none"
+                                    aria-label={`Remove ${c.name}`}
+                                >
+                                    <X className="w-3.5 h-3.5" />
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                )}
 
                 <div className="space-y-6">
                     {/* Chart Area */}
                     <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
                         {selectedCountries.length === 0 ? (
-                            <div className="h-64 flex items-center justify-center text-slate-400 text-sm">
-                                Select at least one country to compare
+                            <div className="h-[400px] flex flex-col items-center justify-center text-center p-6 bg-slate-50/50 rounded-xl border border-dashed border-slate-200">
+                                <div className="bg-white p-4 rounded-full shadow-sm mb-4">
+                                    <BarChart2 className="w-8 h-8 text-orange-400" />
+                                </div>
+                                <h3 className="text-lg font-semibold text-slate-800 mb-2">No Countries Selected</h3>
+                                <p className="text-sm text-slate-500 max-w-sm">
+                                    Select countries from the sidebar to compare their health system performance and generate insights.
+                                </p>
                             </div>
                         ) : chartType === 'bar' ? (
                             <BarChart categories={bbNames} data={barData} height={400} />

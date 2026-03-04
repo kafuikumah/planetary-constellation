@@ -52,6 +52,7 @@ export function BarChart({ categories, data, title, height = 350, horizontal = f
             option={option}
             style={{ height, width: '100%' }}
             opts={{ renderer: 'svg' }}
+            notMerge={true}
         />
     );
 }

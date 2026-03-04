@@ -5,7 +5,7 @@ import { Country } from '@/types/country';
 import { getCountryById } from '@/data/countries';
 
 export function useComparison() {
-    const [selectedIds, setSelectedIds] = useState<string[]>(['nga', 'zaf', 'ken']);
+    const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
     const selectedCountries = useMemo(() => {
         return selectedIds
