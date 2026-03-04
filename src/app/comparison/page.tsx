@@ -11,16 +11,25 @@ import { CountryFlag } from '@/components/shared/CountryFlag';
 import { ScoreBadge } from '@/components/shared/ScoreBadge';
 import { calculateOverallScore, cn, getScoreColor } from '@/lib/utils';
 import { PageLayout } from '@/components/layout/PageLayout';
-import { Check, X, BarChart2 } from 'lucide-react';
+import { Check, X, BarChart2, Search, ChevronDown, BarChart3 } from 'lucide-react';
 
 const allCountries = getAllCountriesAlphabetical();
 
 type ChartType = 'bar' | 'radar' | 'line';
 
 export default function ComparisonPage() {
-    const { selectedIds, selectedCountries, toggleCountry } = useComparison();
-    const [chartType, setChartType] = useState<ChartType>('bar');
+    const { selectedIds, selectedCountries, toggleCountry, setSelectedIds } = useComparison();
+    const [chartType, setChartType] = useState<ChartType>('radar');
     const [searchQuery, setSearchQuery] = useState('');
+
+    // UI states for sidebar
+    const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
+    const [isIndicatorDropdownOpen, setIsIndicatorDropdownOpen] = useState(false);
+
+    // Data states
+    const [selectedIndicator, setSelectedIndicator] = useState<string>('all_building_blocks');
+    const [appliedCountries, setAppliedCountries] = useState(selectedCountries);
+    const [appliedIndicator, setAppliedIndicator] = useState<string>('all_building_blocks');
 
     const filteredCountries = useMemo(() => {
         if (!searchQuery) return allCountries;
@@ -29,83 +38,216 @@ export default function ComparisonPage() {
 
     const bbNames = buildingBlocks.map(bb => bb.name);
 
-    const barData = selectedCountries.map(c => ({
-        name: c.name,
-        values: buildingBlocks.map(bb => c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score),
-    }));
+    // Dynamic Chart Data based on Applied Indicator
+    let barData: { name: string, values: number[] }[] = [];
+    let radarCountries: { name: string, scores: number[] }[] = [];
+    let singleIndicatorName = '';
 
-    const radarData = selectedCountries.length > 0
-        ? buildingBlocks.map(bb => ({
-            name: bb.name,
-            value: selectedCountries[0].buildingBlocks[bb.id as keyof typeof selectedCountries[0]['buildingBlocks']].score,
-        }))
-        : [];
+    if (appliedIndicator === 'all_building_blocks' || appliedIndicator === 'overall') {
+        // Show all building blocks
+        barData = appliedCountries.map(c => ({
+            name: c.name,
+            values: buildingBlocks.map(bb => c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score),
+        }));
 
-    const radarCompare = selectedCountries.length > 1
-        ? buildingBlocks.map(bb => ({
-            name: bb.name,
-            value: Math.round(
-                selectedCountries.slice(1).reduce(
-                    (sum, c) => sum + c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score, 0
-                ) / (selectedCountries.length - 1)
-            ),
-        }))
-        : undefined;
+        radarCountries = appliedCountries.map(c => ({
+            name: c.name,
+            scores: buildingBlocks.map(bb => c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score),
+        }));
+    } else {
+        // Single Building Block Selected
+        const bb = buildingBlocks.find(b => b.id === appliedIndicator);
+        if (bb) {
+            singleIndicatorName = bb.name;
+            barData = appliedCountries.map(c => ({
+                name: c.name,
+                values: [c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score],
+            }));
+
+            // Radar makes no sense for a single point, so we just supply empty array
+            // and we will disable/hide the radar option in the UI below
+        }
+    }
 
     // Generate insights
     const insights = useMemo(() => {
-        if (selectedCountries.length < 2) return [];
+        if (appliedCountries.length < 2) return [];
         const results: string[] = [];
-        const best = selectedCountries.reduce((a, b) =>
-            calculateOverallScore(a.buildingBlocks) > calculateOverallScore(b.buildingBlocks) ? a : b
-        );
-        results.push(`${best.name} leads with an overall score of ${calculateOverallScore(best.buildingBlocks)}.`);
 
-        buildingBlocks.forEach(bb => {
-            const scores = selectedCountries.map(c => ({
-                name: c.name,
-                score: c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score,
-            }));
-            const max = scores.reduce((a, b) => a.score > b.score ? a : b);
-            const min = scores.reduce((a, b) => a.score < b.score ? a : b);
-            if (max.score - min.score > 20) {
-                results.push(`Largest gap in ${bb.name}: ${max.name} (${max.score}) vs ${min.name} (${min.score}).`);
+        if (appliedIndicator === 'all_building_blocks' || appliedIndicator === 'overall') {
+            const best = appliedCountries.reduce((a, b) =>
+                calculateOverallScore(a.buildingBlocks) > calculateOverallScore(b.buildingBlocks) ? a : b
+            );
+            results.push(`${best.name} demonstrates the most robust health system among the selected group, achieving a leading overall score of ${calculateOverallScore(best.buildingBlocks)}.`);
+
+            buildingBlocks.forEach(bb => {
+                const scores = appliedCountries.map(c => ({
+                    name: c.name,
+                    score: c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score,
+                }));
+                const max = scores.reduce((a, b) => a.score > b.score ? a : b);
+                const min = scores.reduce((a, b) => a.score < b.score ? a : b);
+
+                if (max.score - min.score > 20) {
+                    results.push(`There is a significant disparity of ${max.score - min.score} points in ${bb.name}, with ${max.name} outperforming ${min.name} (${max.score} vs ${min.score}).`);
+                }
+            });
+        } else {
+            // Insights for a single indicator
+            const bb = buildingBlocks.find(b => b.id === appliedIndicator);
+            if (bb) {
+                const scores = appliedCountries.map(c => ({
+                    name: c.name,
+                    score: c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score,
+                })).sort((a, b) => b.score - a.score);
+
+                results.push(`${scores[0].name} leads the peer group in ${bb.name} with a score of ${scores[0].score}.`);
+                if (scores.length > 1) {
+                    const diff = scores[0].score - scores[scores.length - 1].score;
+                    if (diff > 15) {
+                        results.push(`${scores[scores.length - 1].name} lags behind with a ${bb.name} score of ${scores[scores.length - 1].score}, indicating a potential area for targeted capacity building.`);
+                    } else {
+                        results.push(`Performance in ${bb.name} is relatively consistent across the selected countries, with only a ${diff}-point gap between the highest and lowest performers.`);
+                    }
+                }
             }
-        });
+        }
 
         return results;
-    }, [selectedCountries]);
+    }, [appliedCountries, appliedIndicator]);
+
+    const handleGenerate = () => {
+        setAppliedCountries(selectedCountries);
+        setAppliedIndicator(selectedIndicator);
+
+        // Auto-switch away from radar if a single indicator is chosen
+        if (selectedIndicator !== 'all_building_blocks' && selectedIndicator !== 'overall' && chartType === 'radar') {
+            setChartType('bar');
+        }
+    };
 
     const sidebar = (
-        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full overflow-hidden p-4">
-            <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-400 mb-3 block">Select Countries</p>
-            <input
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                className="w-full border border-slate-200 rounded-md px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-500/30"
-            />
-            <div className="flex-1 overflow-y-auto space-y-1 pr-1">
-                {filteredCountries.map(c => (
+        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 gap-6 overflow-y-auto">
+
+            {/* Select Countries Dropdown */}
+            <div className="flex flex-col gap-2 relative z-20">
+                <label className="text-sm text-slate-600">Select Countries</label>
+                <div className="relative">
                     <button
-                        key={c.id}
-                        onClick={() => toggleCountry(c.id)}
-                        className={cn(
-                            'w-full text-left px-3 py-2 rounded-md text-sm flex items-center gap-2 transition-colors',
-                            selectedIds.includes(c.id)
-                                ? 'bg-orange-50 text-orange-700'
-                                : 'text-slate-600 hover:bg-slate-50'
-                        )}
+                        onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
+                        className="w-full flex items-center justify-between border border-slate-200 bg-slate-50/50 rounded-lg px-3 py-2.5 text-sm text-slate-500 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500/30"
                     >
-                        <CountryFlag code={c.code} name={c.name} />
-                        <span className="truncate">{c.name}</span>
-                        {selectedIds.includes(c.id) && <Check className="w-4 h-4 text-orange-500 ml-auto flex-shrink-0" />}
+                        <div className="flex items-center gap-2">
+                            <Search className="w-4 h-4 text-slate-400" />
+                            <span>Choose by Country</span>
+                        </div>
+                        <ChevronDown className={cn("w-4 h-4 text-slate-400 transition-transform", isCountryDropdownOpen && "rotate-180")} />
                     </button>
-                ))}
+
+                    {isCountryDropdownOpen && (
+                        <div className="absolute top-12 left-0 w-full bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden flex flex-col max-h-[250px]">
+                            <input
+                                type="text"
+                                placeholder="Search countries..."
+                                value={searchQuery}
+                                onChange={e => setSearchQuery(e.target.value)}
+                                className="w-full border-b border-slate-100 px-3 py-2 text-sm focus:outline-none bg-slate-50"
+                            />
+                            <div className="flex-1 overflow-y-auto">
+                                {filteredCountries.map(c => (
+                                    <button
+                                        key={c.id}
+                                        onClick={() => {
+                                            toggleCountry(c.id);
+                                            setIsCountryDropdownOpen(false);
+                                        }}
+                                        className="w-full text-left px-3 py-2 text-sm flex items-center gap-2 hover:bg-slate-50 transition-colors"
+                                    >
+                                        <div className={cn(
+                                            "w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 transition-colors",
+                                            selectedIds.includes(c.id) ? "bg-orange-500 border-orange-500" : "border-slate-300 bg-white"
+                                        )}>
+                                            {selectedIds.includes(c.id) && <Check className="w-3 h-3 text-white" />}
+                                        </div>
+                                        <CountryFlag code={c.code} name={c.name} />
+                                        <span className={cn("truncate", selectedIds.includes(c.id) ? "text-slate-900 font-medium" : "text-slate-600")}>{c.name}</span>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+
+                {/* Visual feedback of selected countries below the dropdown */}
+                {selectedCountries.length > 0 && !isCountryDropdownOpen && (
+                    <div className="flex flex-wrap gap-1 mt-1">
+                        {selectedCountries.map(c => (
+                            <span key={c.id} className="inline-flex items-center gap-1 bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-xs">
+                                {c.name}
+                                <button onClick={() => toggleCountry(c.id)} className="hover:text-red-500 focus:outline-none"><X className="w-3 h-3" /></button>
+                            </span>
+                        ))}
+                    </div>
+                )}
             </div>
 
+            {/* Select Indicator Dropdown */}
+            <div className="flex flex-col gap-2 relative z-10">
+                <label className="text-sm text-slate-600">Select Indicator</label>
+                <div className="relative">
+                    <button
+                        onClick={() => setIsIndicatorDropdownOpen(!isIndicatorDropdownOpen)}
+                        className="w-full flex items-center justify-between border border-slate-200 bg-slate-50/50 rounded-lg px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500/30"
+                    >
+                        <span className="truncate">
+                            {selectedIndicator === 'all_building_blocks' ? 'All Building Blocks' :
+                                selectedIndicator === 'overall' ? 'Overall Health Score' :
+                                    buildingBlocks.find(b => b.id === selectedIndicator)?.name || 'Choose indicator'}
+                        </span>
+                        <ChevronDown className={cn("w-4 h-4 text-slate-400 transition-transform", isIndicatorDropdownOpen && "rotate-180")} />
+                    </button>
 
+                    {isIndicatorDropdownOpen && (
+                        <div className="absolute top-12 left-0 w-full bg-white border border-slate-200 rounded-lg shadow-lg overflow-y-auto max-h-[250px]">
+                            <button
+                                onClick={() => { setSelectedIndicator('all_building_blocks'); setIsIndicatorDropdownOpen(false); }}
+                                className={cn("w-full text-left px-3 py-2.5 text-sm transition-colors", selectedIndicator === 'all_building_blocks' ? "bg-orange-50 text-orange-700 font-medium" : "text-slate-700 hover:bg-slate-50")}
+                            >
+                                All Building Blocks
+                            </button>
+                            <button
+                                onClick={() => { setSelectedIndicator('overall'); setIsIndicatorDropdownOpen(false); }}
+                                className={cn("w-full text-left px-3 py-2.5 text-sm transition-colors", selectedIndicator === 'overall' ? "bg-orange-50 text-orange-700 font-medium" : "text-slate-700 hover:bg-slate-50")}
+                            >
+                                Overall Health Score
+                            </button>
+                            <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400 bg-slate-50 border-y border-slate-100">
+                                Specific Building Blocks
+                            </div>
+                            {buildingBlocks.map(bb => (
+                                <button
+                                    key={bb.id}
+                                    onClick={() => { setSelectedIndicator(bb.id); setIsIndicatorDropdownOpen(false); }}
+                                    className={cn("w-full text-left px-3 py-2.5 text-sm transition-colors", selectedIndicator === bb.id ? "bg-orange-50 text-orange-700 font-medium" : "text-slate-700 hover:bg-slate-50")}
+                                >
+                                    {bb.name}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            <div className="mt-auto pt-4 relative z-0">
+                <button
+                    onClick={handleGenerate}
+                    disabled={selectedCountries.length === 0}
+                    className="w-full bg-[#F59E0B] hover:bg-[#D97706] disabled:bg-slate-200 disabled:text-slate-400 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:ring-offset-2"
+                >
+                    <BarChart3 className="w-4 h-4" />
+                    Generate Comparison
+                </button>
+            </div>
         </aside>
     );
 
@@ -120,31 +262,52 @@ export default function ComparisonPage() {
                         <p className="text-sm text-slate-500 mt-1">Compare health system performance across multiple countries</p>
                     </div>
                     {/* Chart Type Toggle */}
-                    <div className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
-                        {(['bar', 'radar', 'line'] as ChartType[]).map(t => (
-                            <button
-                                key={t}
-                                onClick={() => setChartType(t)}
-                                className={cn(
-                                    'px-4 py-1.5 rounded-md text-sm font-medium transition-colors capitalize',
-                                    chartType === t ? 'bg-white text-orange-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'
-                                )}
-                            >
-                                {t}
-                            </button>
-                        ))}
-                    </div>
+                    {(appliedIndicator === 'all_building_blocks' || appliedIndicator === 'overall') && (
+                        <div className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
+                            {(['radar', 'bar', 'line'] as ChartType[]).map(t => (
+                                <button
+                                    key={t}
+                                    onClick={() => setChartType(t)}
+                                    className={cn(
+                                        'px-4 py-1.5 rounded-md text-sm font-medium transition-colors capitalize',
+                                        chartType === t ? 'bg-white text-orange-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                                    )}
+                                >
+                                    {t}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                    {appliedIndicator !== 'all_building_blocks' && appliedIndicator !== 'overall' && (
+                        <div className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
+                            {(['bar', 'line'] as ChartType[]).map(t => (
+                                <button
+                                    key={t}
+                                    onClick={() => setChartType(t)}
+                                    className={cn(
+                                        'px-4 py-1.5 rounded-md text-sm font-medium transition-colors capitalize',
+                                        chartType === t ? 'bg-white text-orange-600 shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                                    )}
+                                >
+                                    {t}
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 {/* Selected Countries Bubbles */}
-                {selectedCountries.length > 0 && (
+                {appliedCountries.length > 0 && (
                     <div className="flex flex-wrap gap-2">
-                        {selectedCountries.map(c => (
+                        {appliedCountries.map(c => (
                             <div key={c.id} className="flex items-center gap-1.5 bg-orange-50 border border-orange-200 px-3 py-1.5 rounded-full text-sm">
                                 <CountryFlag code={c.code} name={c.name} />
                                 <span className="font-medium text-slate-800">{c.name}</span>
                                 <button
-                                    onClick={() => toggleCountry(c.id)}
+                                    onClick={() => {
+                                        toggleCountry(c.id);
+                                        setAppliedCountries(prev => prev.filter(ac => ac.id !== c.id));
+                                    }}
                                     className="ml-1 text-slate-400 hover:text-orange-600 transition-colors p-0.5 rounded-full hover:bg-orange-100 focus:outline-none"
                                     aria-label={`Remove ${c.name}`}
                                 >
@@ -158,61 +321,91 @@ export default function ComparisonPage() {
                 <div className="space-y-6">
                     {/* Chart Area */}
                     <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
-                        {selectedCountries.length === 0 ? (
+                        {appliedCountries.length === 0 ? (
                             <div className="h-[400px] flex flex-col items-center justify-center text-center p-6 bg-slate-50/50 rounded-xl border border-dashed border-slate-200">
                                 <div className="bg-white p-4 rounded-full shadow-sm mb-4">
                                     <BarChart2 className="w-8 h-8 text-orange-400" />
                                 </div>
-                                <h3 className="text-lg font-semibold text-slate-800 mb-2">No Countries Selected</h3>
+                                <h3 className="text-lg font-semibold text-slate-800 mb-2">No Countries Generated</h3>
                                 <p className="text-sm text-slate-500 max-w-sm">
-                                    Select countries from the sidebar to compare their health system performance and generate insights.
+                                    Select countries and an indicator from the sidebar, then click Generate Comparison.
                                 </p>
                             </div>
                         ) : chartType === 'bar' ? (
-                            <BarChart categories={bbNames} data={barData} height={400} />
-                        ) : chartType === 'radar' ? (
-                            <RadarChart data={radarData} compareData={radarCompare} title={selectedCountries[0]?.name} height={400} />
+                            <BarChart
+                                categories={appliedIndicator === 'all_building_blocks' || appliedIndicator === 'overall' ? bbNames : [singleIndicatorName]}
+                                data={barData}
+                                height={400}
+                            />
+                        ) : chartType === 'radar' && radarCountries.length > 0 ? (
+                            <RadarChart indicators={bbNames} countries={radarCountries} height={400} />
                         ) : (
-                            <LineChart categories={bbNames} data={barData} height={400} />
+                            <LineChart
+                                categories={appliedIndicator === 'all_building_blocks' || appliedIndicator === 'overall' ? bbNames : [singleIndicatorName]}
+                                data={barData}
+                                height={400}
+                            />
                         )}
                     </div>
 
                     {/* Comparison Table */}
-                    {selectedCountries.length > 0 && (
-                        <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="border-b border-slate-100">
-                                            <th className="text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-400">Country</th>
-                                            <th className="text-center px-3 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-400">Overall</th>
-                                            {buildingBlocks.map(bb => (
-                                                <th key={bb.id} className="text-center px-3 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-400">{bb.name.split(' ')[0]}</th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {selectedCountries.map(c => (
-                                            <tr key={c.id} className="border-b border-slate-50 hover:bg-slate-50">
-                                                <td className="px-4 py-3 flex items-center gap-2">
-                                                    <CountryFlag code={c.code} name={c.name} />
-                                                    <span className="font-medium text-slate-800">{c.name}</span>
-                                                </td>
-                                                <td className="text-center px-3 py-3">
-                                                    <ScoreBadge score={calculateOverallScore(c.buildingBlocks)} size="sm" />
-                                                </td>
-                                                {buildingBlocks.map(bb => {
-                                                    const score = c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score;
-                                                    return (
-                                                        <td key={bb.id} className={cn('text-center px-3 py-3 font-semibold font-mono-data', getScoreColor(score))}>
-                                                            {score}
-                                                        </td>
-                                                    );
-                                                })}
+                    {appliedCountries.length > 0 && (
+                        <div>
+                            <h3 className="text-lg font-semibold text-slate-800 mb-4 px-1">Detailed Breakdown</h3>
+                            <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm">
+                                        <thead className="bg-slate-50/50 border-b border-slate-100">
+                                            <tr>
+                                                <th className="text-left px-5 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400">Country</th>
+                                                <th className="text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400">Overall</th>
+                                                <th className="text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap">Pop. (M)</th>
+                                                <th className="text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap">Exp./Capita</th>
+                                                <th className="text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap">Health/GDP %</th>
+                                                <th className="text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap">Debt Service %</th>
+                                                {buildingBlocks.map(bb => (
+                                                    <th key={bb.id} className="text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap">
+                                                        {bb.name}
+                                                    </th>
+                                                ))}
                                             </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody className="divide-y divide-slate-100">
+                                            {appliedCountries.map(c => (
+                                                <tr key={c.id} className="hover:bg-slate-50 transition-colors">
+                                                    <td className="px-5 py-3.5 flex items-center gap-2 min-w-[140px]">
+                                                        <CountryFlag code={c.code} name={c.name} />
+                                                        <span className="font-medium text-slate-800 text-sm whitespace-nowrap">{c.name}</span>
+                                                    </td>
+                                                    <td className="px-4 py-3.5 text-center">
+                                                        {(() => {
+                                                            const overallScore = calculateOverallScore(c.buildingBlocks);
+                                                            return (
+                                                                <span className={cn('px-2.5 py-1 rounded text-xs font-semibold font-mono-data', getScoreColor(overallScore))}>
+                                                                    {overallScore}
+                                                                </span>
+                                                            );
+                                                        })()}
+                                                    </td>
+                                                    <td className="px-4 py-3.5 text-center text-slate-600 font-mono-data">{c.population.toFixed(1)}</td>
+                                                    <td className="px-4 py-3.5 text-center text-slate-600 font-mono-data">${c.healthExpPerCapita}</td>
+                                                    <td className="px-4 py-3.5 text-center text-slate-600 font-mono-data">{c.healthGdpPercent.toFixed(1)}%</td>
+                                                    <td className="px-4 py-3.5 text-center text-slate-600 font-mono-data">{c.debtServiceRatio.toFixed(1)}%</td>
+                                                    {buildingBlocks.map(bb => {
+                                                        const score = c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score;
+                                                        return (
+                                                            <td key={`${bb.id}-${c.id}`} className="px-4 py-3.5 text-center">
+                                                                <span className={cn('px-2.5 py-1 rounded text-xs font-semibold font-mono-data', getScoreColor(score))}>
+                                                                    {score}
+                                                                </span>
+                                                            </td>
+                                                        );
+                                                    })}
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     )}

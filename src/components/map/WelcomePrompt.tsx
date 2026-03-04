@@ -14,22 +14,24 @@ export function WelcomePrompt() {
     useEffect(() => {
         const hasSeenPrompt = sessionStorage.getItem('hasSeenWelcomePrompt');
         if (!hasSeenPrompt && !selectedId) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsVisible(true);
         }
     }, [selectedId]);
-
-    // Automatically dismiss if a country is selected
-    useEffect(() => {
-        if (selectedId && isVisible) {
-            handleDismiss();
-        }
-    }, [selectedId, isVisible]);
 
     const handleDismiss = () => {
         setIsVisible(false);
         setIsDismissed(true);
         sessionStorage.setItem('hasSeenWelcomePrompt', 'true');
     };
+
+    // Automatically dismiss if a country is selected
+    useEffect(() => {
+        if (selectedId && isVisible) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            handleDismiss();
+        }
+    }, [selectedId, isVisible]);
 
     // If completely dismissed, remove from DOM
     if (!isVisible && isDismissed) {

@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/benchmarking/page": "/benchmarking",
+  "/comparison/page": "/comparison",
+  "/country-profiles/[id]/page": "/country-profiles/[id]",
+  "/country-profiles/page": "/country-profiles",
+  "/favicon.ico/route": "/favicon.ico",
+  "/methodology/page": "/methodology",
+  "/page": "/",
+  "/policies/page": "/policies"
+}

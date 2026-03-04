@@ -1922,6 +1922,7 @@ __turbopack_context__.s([
     ()=>WelcomePrompt
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$hooks$2f$useSelectedCountry$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/src/hooks/useSelectedCountry.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
@@ -1935,242 +1936,354 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 function WelcomePrompt() {
     _s();
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(24);
+    if ($[0] !== "7988a89e026c7f50fe7cd22a461a77862cfd3410bb68de76b12f35ce0d4354d5") {
+        for(let $i = 0; $i < 24; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "7988a89e026c7f50fe7cd22a461a77862cfd3410bb68de76b12f35ce0d4354d5";
+    }
     const { selectedId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$hooks$2f$useSelectedCountry$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSelectedCountry"])();
     const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isDismissed, setIsDismissed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    // Initialize visibility based on session storage and selected country
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "WelcomePrompt.useEffect": ()=>{
-            const hasSeenPrompt = sessionStorage.getItem('hasSeenWelcomePrompt');
-            if (!hasSeenPrompt && !selectedId) {
-                setIsVisible(true);
+    let t0;
+    let t1;
+    if ($[1] !== selectedId) {
+        t0 = ({
+            "WelcomePrompt[useEffect()]": ()=>{
+                const hasSeenPrompt = sessionStorage.getItem("hasSeenWelcomePrompt");
+                if (!hasSeenPrompt && !selectedId) {
+                    setIsVisible(true);
+                }
             }
-        }
-    }["WelcomePrompt.useEffect"], [
-        selectedId
-    ]);
-    // Automatically dismiss if a country is selected
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "WelcomePrompt.useEffect": ()=>{
-            if (selectedId && isVisible) {
-                handleDismiss();
+        })["WelcomePrompt[useEffect()]"];
+        t1 = [
+            selectedId
+        ];
+        $[1] = selectedId;
+        $[2] = t0;
+        $[3] = t1;
+    } else {
+        t0 = $[2];
+        t1 = $[3];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t0, t1);
+    let t2;
+    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
+        t2 = ({
+            "WelcomePrompt[handleDismiss]": ()=>{
+                setIsVisible(false);
+                setIsDismissed(true);
+                sessionStorage.setItem("hasSeenWelcomePrompt", "true");
             }
-        }
-    }["WelcomePrompt.useEffect"], [
-        selectedId,
-        isVisible
-    ]);
-    const handleDismiss = ()=>{
-        setIsVisible(false);
-        setIsDismissed(true);
-        sessionStorage.setItem('hasSeenWelcomePrompt', 'true');
-    };
-    // If completely dismissed, remove from DOM
+        })["WelcomePrompt[handleDismiss]"];
+        $[4] = t2;
+    } else {
+        t2 = $[4];
+    }
+    const handleDismiss = t2;
+    let t3;
+    let t4;
+    if ($[5] !== isVisible || $[6] !== selectedId) {
+        t3 = ({
+            "WelcomePrompt[useEffect()]": ()=>{
+                if (selectedId && isVisible) {
+                    handleDismiss();
+                }
+            }
+        })["WelcomePrompt[useEffect()]"];
+        t4 = [
+            selectedId,
+            isVisible
+        ];
+        $[5] = isVisible;
+        $[6] = selectedId;
+        $[7] = t3;
+        $[8] = t4;
+    } else {
+        t3 = $[7];
+        t4 = $[8];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t3, t4);
     if (!isVisible && isDismissed) {
         return null;
     }
-    // Always keep it in the tree if it hasn't been dismissed, so the fade-out animation can play
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/20 backdrop-blur-sm transition-all duration-500", isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"),
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-200 p-8 transform transition-all duration-500", isVisible ? "scale-100 translate-y-0" : "scale-95 translate-y-4"),
+    const t5 = isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none";
+    let t6;
+    if ($[9] !== t5) {
+        t6 = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/20 backdrop-blur-sm transition-all duration-500", t5);
+        $[9] = t5;
+        $[10] = t6;
+    } else {
+        t6 = $[10];
+    }
+    const t7 = isVisible ? "scale-100 translate-y-0" : "scale-95 translate-y-4";
+    let t8;
+    if ($[11] !== t7) {
+        t8 = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-200 p-8 transform transition-all duration-500", t7);
+        $[11] = t7;
+        $[12] = t8;
+    } else {
+        t8 = $[12];
+    }
+    let t9;
+    if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            onClick: handleDismiss,
+            className: "absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors",
+            "aria-label": "Close welcome prompt",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                className: "w-5 h-5"
+            }, void 0, false, {
+                fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                lineNumber: 98,
+                columnNumber: 201
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+            lineNumber: 98,
+            columnNumber: 10
+        }, this);
+        $[13] = t9;
+    } else {
+        t9 = $[13];
+    }
+    let t10;
+    let t11;
+    if ($[14] === Symbol.for("react.memo_cache_sentinel")) {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "w-16 h-16 bg-[#F29D38]/10 rounded-2xl flex items-center justify-center mb-2",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Map$3e$__["Map"], {
+                className: "w-8 h-8 text-[#F29D38]"
+            }, void 0, false, {
+                fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                lineNumber: 106,
+                columnNumber: 104
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+            lineNumber: 106,
+            columnNumber: 11
+        }, this);
+        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: handleDismiss,
-                    className: "absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors",
-                    "aria-label": "Close welcome prompt",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                        className: "w-5 h-5"
-                    }, void 0, false, {
-                        fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                        lineNumber: 44,
-                        columnNumber: 21
-                    }, this)
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-2xl font-bold font-sans text-slate-900 mb-2",
+                    children: "Explore African Health Financing"
                 }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                    lineNumber: 43,
-                    columnNumber: 17
+                    lineNumber: 107,
+                    columnNumber: 16
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex flex-col items-center text-center space-y-6",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-16 h-16 bg-[#F29D38]/10 rounded-2xl flex items-center justify-center mb-2",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Map$3e$__["Map"], {
-                                className: "w-8 h-8 text-[#F29D38]"
-                            }, void 0, false, {
-                                fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                lineNumber: 50,
-                                columnNumber: 25
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 49,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-2xl font-bold font-sans text-slate-900 mb-2",
-                                    children: "Explore African Health Financing"
-                                }, void 0, false, {
-                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 54,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-slate-600 font-sans leading-relaxed",
-                                    children: "Discover data-driven insights into health system performance and financing across the continent."
-                                }, void 0, false, {
-                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 57,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 53,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-full bg-slate-50 rounded-xl p-5 border border-slate-100 text-left space-y-4",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-sm font-bold text-slate-900 uppercase tracking-wider",
-                                    children: "How to begin"
-                                }, void 0, false, {
-                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 64,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-start gap-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-white p-2 text-slate-400 rounded-lg shadow-sm border border-slate-100 shrink-0",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Map$3e$__["Map"], {
-                                                className: "w-5 h-5"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                lineNumber: 70,
-                                                columnNumber: 33
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 69,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                    className: "font-semibold text-slate-900",
-                                                    children: "Select on Map"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 73,
-                                                    columnNumber: 33
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-sm text-slate-500",
-                                                    children: "Click any highlighted country to view its overview and performance scores."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 74,
-                                                    columnNumber: 33
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 72,
-                                            columnNumber: 29
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 68,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-start gap-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-white p-2 text-slate-400 rounded-lg shadow-sm border border-slate-100 shrink-0",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
-                                                className: "w-5 h-5"
-                                            }, void 0, false, {
-                                                fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                lineNumber: 80,
-                                                columnNumber: 33
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 79,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                    className: "font-semibold text-slate-900",
-                                                    children: "Search Sidebar"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 83,
-                                                    columnNumber: 33
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-sm text-slate-500",
-                                                    children: "Use the left sidebar to find specific countries or browse the full list."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 84,
-                                                    columnNumber: 33
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 82,
-                                            columnNumber: 29
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 78,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 63,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            onClick: handleDismiss,
-                            className: "w-full bg-[#F29D38] hover:bg-[#E08D28] text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-[#F29D38]/20 transition-all hover:shadow-[#F29D38]/40 hover:-translate-y-0.5",
-                            children: "Get Started"
-                        }, void 0, false, {
-                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 90,
-                            columnNumber: 21
-                        }, this)
-                    ]
-                }, void 0, true, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-slate-600 font-sans leading-relaxed",
+                    children: "Discover data-driven insights into health system performance and financing across the continent."
+                }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                    lineNumber: 47,
-                    columnNumber: 17
+                    lineNumber: 107,
+                    columnNumber: 118
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-            lineNumber: 41,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-        lineNumber: 40,
-        columnNumber: 10
-    }, this);
+            lineNumber: 107,
+            columnNumber: 11
+        }, this);
+        $[14] = t10;
+        $[15] = t11;
+    } else {
+        t10 = $[14];
+        t11 = $[15];
+    }
+    let t12;
+    if ($[16] === Symbol.for("react.memo_cache_sentinel")) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+            className: "text-sm font-bold text-slate-900 uppercase tracking-wider",
+            children: "How to begin"
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+            lineNumber: 116,
+            columnNumber: 11
+        }, this);
+        $[16] = t12;
+    } else {
+        t12 = $[16];
+    }
+    let t13;
+    if ($[17] === Symbol.for("react.memo_cache_sentinel")) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex items-start gap-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "bg-white p-2 text-slate-400 rounded-lg shadow-sm border border-slate-100 shrink-0",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Map$3e$__["Map"], {
+                        className: "w-5 h-5"
+                    }, void 0, false, {
+                        fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                        lineNumber: 123,
+                        columnNumber: 150
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                    lineNumber: 123,
+                    columnNumber: 51
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                            className: "font-semibold text-slate-900",
+                            children: "Select on Map"
+                        }, void 0, false, {
+                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                            lineNumber: 123,
+                            columnNumber: 188
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-sm text-slate-500",
+                            children: "Click any highlighted country to view its overview and performance scores."
+                        }, void 0, false, {
+                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                            lineNumber: 123,
+                            columnNumber: 251
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                    lineNumber: 123,
+                    columnNumber: 183
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+            lineNumber: 123,
+            columnNumber: 11
+        }, this);
+        $[17] = t13;
+    } else {
+        t13 = $[17];
+    }
+    let t14;
+    if ($[18] === Symbol.for("react.memo_cache_sentinel")) {
+        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex flex-col items-center text-center space-y-6",
+            children: [
+                t10,
+                t11,
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "w-full bg-slate-50 rounded-xl p-5 border border-slate-100 text-left space-y-4",
+                    children: [
+                        t12,
+                        t13,
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-start gap-4",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "bg-white p-2 text-slate-400 rounded-lg shadow-sm border border-slate-100 shrink-0",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                        className: "w-5 h-5"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                                        lineNumber: 130,
+                                        columnNumber: 331
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                                    lineNumber: 130,
+                                    columnNumber: 232
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                            className: "font-semibold text-slate-900",
+                                            children: "Search Sidebar"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                                            lineNumber: 130,
+                                            columnNumber: 372
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-sm text-slate-500",
+                                            children: "Use the left sidebar to find specific countries or browse the full list."
+                                        }, void 0, false, {
+                                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                                            lineNumber: 130,
+                                            columnNumber: 436
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                                    lineNumber: 130,
+                                    columnNumber: 367
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                            lineNumber: 130,
+                            columnNumber: 192
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                    lineNumber: 130,
+                    columnNumber: 87
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: handleDismiss,
+                    className: "w-full bg-[#F29D38] hover:bg-[#E08D28] text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-[#F29D38]/20 transition-all hover:shadow-[#F29D38]/40 hover:-translate-y-0.5",
+                    children: "Get Started"
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+                    lineNumber: 130,
+                    columnNumber: 568
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+            lineNumber: 130,
+            columnNumber: 11
+        }, this);
+        $[18] = t14;
+    } else {
+        t14 = $[18];
+    }
+    let t15;
+    if ($[19] !== t8) {
+        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: t8,
+            children: [
+                t9,
+                t14
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+            lineNumber: 137,
+            columnNumber: 11
+        }, this);
+        $[19] = t8;
+        $[20] = t15;
+    } else {
+        t15 = $[20];
+    }
+    let t16;
+    if ($[21] !== t15 || $[22] !== t6) {
+        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: t6,
+            children: t15
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
+            lineNumber: 145,
+            columnNumber: 11
+        }, this);
+        $[21] = t15;
+        $[22] = t6;
+        $[23] = t16;
+    } else {
+        t16 = $[23];
+    }
+    return t16;
 }
 _s(WelcomePrompt, "awiCxvlV2jHsck0NyVcTcIIHLdY=", false, function() {
     return [

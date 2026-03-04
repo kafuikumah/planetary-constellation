@@ -1,0 +1,32 @@
+(globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
+    script: typeof document === "object" ? document.currentScript : undefined,
+    chunks: [
+  "static/chunks/bd586_zrender_lib_0c73b98f._.js",
+  "static/chunks/bd586_echarts_lib_util_d464bc87._.js",
+  "static/chunks/bd586_echarts_lib_model_64217cfa._.js",
+  "static/chunks/bd586_echarts_lib_label_18dbeda0._.js",
+  "static/chunks/bd586_echarts_lib_core_064df06a._.js",
+  "static/chunks/bd586_echarts_lib_scale_0a19e25e._.js",
+  "static/chunks/bd586_echarts_lib_data_a6bebd7e._.js",
+  "static/chunks/bd586_echarts_lib_component_tooltip_239acb02._.js",
+  "static/chunks/bd586_echarts_lib_component_axis_02a4f626._.js",
+  "static/chunks/bd586_echarts_lib_component_axisPointer_66ae8385._.js",
+  "static/chunks/bd586_echarts_lib_component_helper_751faa1f._.js",
+  "static/chunks/bd586_echarts_lib_component_dataZoom_1239ac84._.js",
+  "static/chunks/bd586_echarts_lib_component_toolbox_208a8ca4._.js",
+  "static/chunks/bd586_echarts_lib_component_marker_853c3b82._.js",
+  "static/chunks/bd586_echarts_lib_component_legend_3afc9e57._.js",
+  "static/chunks/bd586_echarts_lib_component_visualMap_e350d09d._.js",
+  "static/chunks/bd586_echarts_lib_component_daf9ecb5._.js",
+  "static/chunks/bd586_echarts_lib_chart_helper_73b9bd63._.js",
+  "static/chunks/bd586_echarts_lib_chart_bar_b0cfb3ca._.js",
+  "static/chunks/bd586_echarts_lib_chart_treemap_6096320b._.js",
+  "static/chunks/bd586_echarts_lib_chart_graph_509c612c._.js",
+  "static/chunks/bd586_echarts_lib_chart_71ab8383._.js",
+  "static/chunks/bd586_echarts_lib_coord_d7546dd6._.js",
+  "static/chunks/bd586_echarts_lib_7fb03a3c._.js",
+  "static/chunks/bd586_echarts_index_defc8a72.js",
+  "static/chunks/bd586_8c9f14e9._.js"
+],
+    source: "dynamic"
+});

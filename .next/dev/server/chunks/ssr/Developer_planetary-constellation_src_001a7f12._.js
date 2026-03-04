@@ -1331,25 +1331,27 @@ function WelcomePrompt() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const hasSeenPrompt = sessionStorage.getItem('hasSeenWelcomePrompt');
         if (!hasSeenPrompt && !selectedId) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsVisible(true);
         }
     }, [
         selectedId
-    ]);
-    // Automatically dismiss if a country is selected
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (selectedId && isVisible) {
-            handleDismiss();
-        }
-    }, [
-        selectedId,
-        isVisible
     ]);
     const handleDismiss = ()=>{
         setIsVisible(false);
         setIsDismissed(true);
         sessionStorage.setItem('hasSeenWelcomePrompt', 'true');
     };
+    // Automatically dismiss if a country is selected
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (selectedId && isVisible) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            handleDismiss();
+        }
+    }, [
+        selectedId,
+        isVisible
+    ]);
     // If completely dismissed, remove from DOM
     if (!isVisible && isDismissed) {
         return null;
@@ -1368,12 +1370,12 @@ function WelcomePrompt() {
                         className: "w-5 h-5"
                     }, void 0, false, {
                         fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                        lineNumber: 59,
+                        lineNumber: 61,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                    lineNumber: 54,
+                    lineNumber: 56,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1385,12 +1387,12 @@ function WelcomePrompt() {
                                 className: "w-8 h-8 text-[#F29D38]"
                             }, void 0, false, {
                                 fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                lineNumber: 65,
+                                lineNumber: 67,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 64,
+                            lineNumber: 66,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1400,7 +1402,7 @@ function WelcomePrompt() {
                                     children: "Explore African Health Financing"
                                 }, void 0, false, {
                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 71,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1408,13 +1410,13 @@ function WelcomePrompt() {
                                     children: "Discover data-driven insights into health system performance and financing across the continent."
                                 }, void 0, false, {
                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 74,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 68,
+                            lineNumber: 70,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1425,7 +1427,7 @@ function WelcomePrompt() {
                                     children: "How to begin"
                                 }, void 0, false, {
                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 79,
+                                    lineNumber: 81,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1437,12 +1439,12 @@ function WelcomePrompt() {
                                                 className: "w-5 h-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 87,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 86,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1452,7 +1454,7 @@ function WelcomePrompt() {
                                                     children: "Select on Map"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 88,
+                                                    lineNumber: 90,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1460,19 +1462,19 @@ function WelcomePrompt() {
                                                     children: "Click any highlighted country to view its overview and performance scores."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 89,
+                                                    lineNumber: 91,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 89,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 85,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1484,12 +1486,12 @@ function WelcomePrompt() {
                                                 className: "w-5 h-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 97,
                                                 columnNumber: 33
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 96,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1499,7 +1501,7 @@ function WelcomePrompt() {
                                                     children: "Search Sidebar"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 98,
+                                                    lineNumber: 100,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1507,25 +1509,25 @@ function WelcomePrompt() {
                                                     children: "Use the left sidebar to find specific countries or browse the full list."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 101,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                            lineNumber: 97,
+                                            lineNumber: 99,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 95,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 78,
+                            lineNumber: 80,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1534,24 +1536,24 @@ function WelcomePrompt() {
                             children: "Get Started"
                         }, void 0, false, {
                             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                            lineNumber: 105,
+                            lineNumber: 107,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-                    lineNumber: 62,
+                    lineNumber: 64,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-            lineNumber: 47,
+            lineNumber: 49,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/Developer/planetary-constellation/src/components/map/WelcomePrompt.tsx",
-        lineNumber: 41,
+        lineNumber: 43,
         columnNumber: 9
     }, this);
 }

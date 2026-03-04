@@ -8,53 +8,71 @@ const ReactECharts = dynamic(
 );
 
 interface RadarChartProps {
-    data: { name: string; value: number }[];
-    compareData?: { name: string; value: number }[];
-    title?: string;
+    indicators: string[];
+    countries: {
+        name: string;
+        scores: number[];
+    }[];
     height?: number;
 }
 
-export function RadarChart({ data, compareData, title, height = 350 }: RadarChartProps) {
-    const indicator = data.map(d => ({ name: d.name, max: 100 }));
+const COLORS = ['#F97316', '#3B82F6', '#10B981', '#8B5CF6', '#EF4444', '#F59E0B'];
 
-    const series = [
-        {
-            type: 'radar',
-            data: [
-                {
-                    value: data.map(d => d.value),
-                    name: title || 'Score',
-                    areaStyle: { opacity: 0.2, color: '#F97316' },
-                    lineStyle: { color: '#F97316', width: 2 },
-                    itemStyle: { color: '#F97316' },
-                },
-            ],
-        },
-    ];
+export function RadarChart({ indicators, countries, height = 400 }: RadarChartProps) {
+    const indicator = indicators.map(name => ({ name, max: 100 }));
 
-    if (compareData) {
-        series[0].data.push({
-            value: compareData.map(d => d.value),
-            name: 'Peer Average',
-            areaStyle: { opacity: 0.1, color: '#3B82F6' },
-            lineStyle: { color: '#3B82F6', width: 2 },
-            itemStyle: { color: '#3B82F6' },
-        });
-    }
+    const seriesData = countries.map((c, index) => {
+        const color = COLORS[index % COLORS.length];
+        return {
+            value: c.scores,
+            name: c.name,
+            areaStyle: { opacity: 0.1, color },
+            lineStyle: { color, width: 2 },
+            itemStyle: { color },
+        };
+    });
 
     const option = {
-        tooltip: { trigger: 'item' },
-        legend: compareData ? { data: [title || 'Score', 'Peer Average'], bottom: 0, textStyle: { fontSize: 11, color: '#64748B' } } : undefined,
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            borderWidth: 1,
+            borderColor: '#E2E8F0',
+            textStyle: { color: '#1E293B' }
+        },
+        legend: {
+            data: countries.map(c => c.name),
+            bottom: 0,
+            padding: [20, 0, 0, 0],
+            textStyle: { fontSize: 11, color: '#64748B' },
+            itemGap: 15
+        },
         radar: {
             indicator,
             shape: 'polygon',
             splitNumber: 5,
-            axisName: { color: '#64748B', fontSize: 11 },
+            axisName: {
+                color: '#64748B',
+                fontSize: 10,
+                formatter: (value: string) => {
+                    // Wrap long names
+                    const words = value.split(' ');
+                    if (words.length > 2) {
+                        return words.slice(0, 2).join(' ') + '\n' + words.slice(2).join(' ');
+                    }
+                    return value;
+                }
+            },
             splitLine: { lineStyle: { color: '#E2E8F0' } },
             splitArea: { areaStyle: { color: ['#F8FAFC', '#FFFFFF'] } },
             axisLine: { lineStyle: { color: '#E2E8F0' } },
+            center: ['50%', '45%'],
+            radius: '65%'
         },
-        series,
+        series: [{
+            type: 'radar',
+            data: seriesData
+        }],
     };
 
     return (

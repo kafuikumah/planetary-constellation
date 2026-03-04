@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/benchmarking/page": "app/benchmarking/page.js",
+  "/comparison/page": "app/comparison/page.js",
+  "/country-profiles/[id]/page": "app/country-profiles/[id]/page.js",
+  "/country-profiles/page": "app/country-profiles/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/methodology/page": "app/methodology/page.js",
+  "/page": "app/page.js",
+  "/policies/page": "app/policies/page.js"
+}

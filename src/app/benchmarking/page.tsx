@@ -27,21 +27,23 @@ export default function BenchmarkingPage() {
         return allCountries.filter(c => c.rec === selectedCountry.rec && c.id !== selectedCountryId);
     }, [selectedCountry, peerGroup, selectedCountryId]);
 
-    const radarData = useMemo(() => {
+    const radarCountries = useMemo(() => {
         if (!selectedCountry) return [];
-        return buildingBlocks.map(bb => ({
-            name: bb.name,
-            value: selectedCountry.buildingBlocks[bb.id as keyof typeof selectedCountry.buildingBlocks].score,
-        }));
-    }, [selectedCountry]);
+        const result = [
+            {
+                name: selectedCountry.name,
+                scores: buildingBlocks.map(bb => selectedCountry.buildingBlocks[bb.id as keyof typeof selectedCountry.buildingBlocks].score),
+            },
+        ];
 
-    const radarPeerAvg = useMemo(() => {
-        if (peerCountries.length === 0) return undefined;
-        return buildingBlocks.map(bb => ({
-            name: bb.name,
-            value: Math.round(average(peerCountries.map(c => c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score))),
-        }));
-    }, [peerCountries]);
+        if (peerCountries.length > 0) {
+            result.push({
+                name: 'Peer Average',
+                scores: buildingBlocks.map(bb => Math.round(average(peerCountries.map(c => c.buildingBlocks[bb.id as keyof typeof c.buildingBlocks].score)))),
+            });
+        }
+        return result;
+    }, [selectedCountry, peerCountries]);
 
     const rankingData = useMemo(() => {
         const group = selectedCountry ? [selectedCountry, ...peerCountries] : peerCountries;
@@ -51,13 +53,14 @@ export default function BenchmarkingPage() {
     }, [selectedCountry, peerCountries]);
 
     const gapAnalysis = useMemo(() => {
-        if (!selectedCountry || !radarPeerAvg) return [];
+        if (!selectedCountry || radarCountries.length < 2) return [];
+        const peerScores = radarCountries[1].scores;
         return buildingBlocks.map((bb, i) => {
             const myScore = selectedCountry.buildingBlocks[bb.id as keyof typeof selectedCountry.buildingBlocks].score;
-            const peerAvg = radarPeerAvg[i].value;
+            const peerAvg = peerScores[i];
             return { block: bb.name, myScore, peerAvg, gap: myScore - peerAvg };
         });
-    }, [selectedCountry, radarPeerAvg]);
+    }, [selectedCountry, radarCountries]);
 
     const regionalAverages = useMemo(() => {
         return REGIONS.map(region => {
@@ -144,7 +147,7 @@ export default function BenchmarkingPage() {
                         <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                             {selectedCountry.name} vs Peer Average
                         </p>
-                        <RadarChart data={radarData} compareData={radarPeerAvg} title={selectedCountry.name} />
+                        <RadarChart indicators={buildingBlocks.map(bb => bb.name)} countries={radarCountries} />
                     </div>
 
                     {/* Rankings Table */}

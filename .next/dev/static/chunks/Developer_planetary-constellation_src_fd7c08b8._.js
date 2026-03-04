@@ -1701,6 +1701,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$co
 var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/lucide-react/dist/esm/icons/check.js [app-client] (ecmascript) <export default as Check>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$no$2d$axes$2d$column$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart2$3e$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/lucide-react/dist/esm/icons/chart-no-axes-column.js [app-client] (ecmascript) <export default as BarChart2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/lucide-react/dist/esm/icons/search.js [app-client] (ecmascript) <export default as Search>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-client] (ecmascript) <export default as ChevronDown>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__ = __turbopack_context__.i("[project]/Developer/planetary-constellation/node_modules/lucide-react/dist/esm/icons/chart-column.js [app-client] (ecmascript) <export default as BarChart3>");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
@@ -1720,16 +1723,21 @@ var _s = __turbopack_context__.k.signature();
 const allCountries = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$countries$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAllCountriesAlphabetical"])();
 function ComparisonPage() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(59);
-    if ($[0] !== "d3f5f7a26717563cf2d742a6a3dd48b8cac1604d918d40e416744e997be3c353") {
-        for(let $i = 0; $i < 59; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(129);
+    if ($[0] !== "39ed4609ee3fdf67ad64d8297de710e389f9334b34f16050aceec3ea88bb01e7") {
+        for(let $i = 0; $i < 129; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "d3f5f7a26717563cf2d742a6a3dd48b8cac1604d918d40e416744e997be3c353";
+        $[0] = "39ed4609ee3fdf67ad64d8297de710e389f9334b34f16050aceec3ea88bb01e7";
     }
     const { selectedIds, selectedCountries, toggleCountry } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$hooks$2f$useComparison$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useComparison"])();
-    const [chartType, setChartType] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("bar");
+    const [chartType, setChartType] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("radar");
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [isCountryDropdownOpen, setIsCountryDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isIndicatorDropdownOpen, setIsIndicatorDropdownOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [selectedIndicator, setSelectedIndicator] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("all_building_blocks");
+    const [appliedCountries, setAppliedCountries] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(selectedCountries);
+    const [appliedIndicator, setAppliedIndicator] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("all_building_blocks");
     let t0;
     bb0: {
         if (!searchQuery) {
@@ -1758,228 +1766,755 @@ function ComparisonPage() {
     }
     const bbNames = t1;
     let t2;
-    if ($[4] !== selectedCountries) {
-        t2 = selectedCountries.map(_ComparisonPageSelectedCountriesMap);
-        $[4] = selectedCountries;
-        $[5] = t2;
+    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
+        t2 = [];
+        $[4] = t2;
     } else {
-        t2 = $[5];
+        t2 = $[4];
     }
-    const barData = t2;
+    let barData = t2;
     let t3;
-    if ($[6] !== selectedCountries[0] || $[7] !== selectedCountries.length) {
-        t3 = selectedCountries.length > 0 ? __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map({
-            "ComparisonPage[buildingBlocks.map()]": (bb_1)=>({
-                    name: bb_1.name,
-                    value: selectedCountries[0].buildingBlocks[bb_1.id].score
-                })
-        }["ComparisonPage[buildingBlocks.map()]"]) : [];
-        $[6] = selectedCountries[0];
-        $[7] = selectedCountries.length;
-        $[8] = t3;
+    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
+        t3 = [];
+        $[5] = t3;
     } else {
-        t3 = $[8];
+        t3 = $[5];
     }
-    const radarData = t3;
-    let t4;
-    if ($[9] !== selectedCountries) {
-        t4 = selectedCountries.length > 1 ? __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map({
-            "ComparisonPage[buildingBlocks.map()]": (bb_2)=>({
-                    name: bb_2.name,
-                    value: Math.round(selectedCountries.slice(1).reduce({
-                        "ComparisonPage[buildingBlocks.map() > (anonymous)()]": (sum, c_1)=>sum + c_1.buildingBlocks[bb_2.id].score
-                    }["ComparisonPage[buildingBlocks.map() > (anonymous)()]"], 0) / (selectedCountries.length - 1))
-                })
-        }["ComparisonPage[buildingBlocks.map()]"]) : undefined;
-        $[9] = selectedCountries;
-        $[10] = t4;
+    let radarData = t3;
+    let radarCompare = undefined;
+    let singleIndicatorName = "";
+    if (appliedIndicator === "all_building_blocks" || appliedIndicator === "overall") {
+        let t4;
+        if ($[6] !== appliedCountries) {
+            t4 = appliedCountries.map(_ComparisonPageAppliedCountriesMap);
+            $[6] = appliedCountries;
+            $[7] = t4;
+        } else {
+            t4 = $[7];
+        }
+        barData = t4;
+        let t5;
+        if ($[8] !== appliedCountries[0] || $[9] !== appliedCountries.length) {
+            t5 = appliedCountries.length > 0 ? __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map({
+                "ComparisonPage[buildingBlocks.map()]": (bb_1)=>({
+                        name: bb_1.name,
+                        value: appliedCountries[0].buildingBlocks[bb_1.id].score
+                    })
+            }["ComparisonPage[buildingBlocks.map()]"]) : [];
+            $[8] = appliedCountries[0];
+            $[9] = appliedCountries.length;
+            $[10] = t5;
+        } else {
+            t5 = $[10];
+        }
+        radarData = t5;
+        let t6;
+        if ($[11] !== appliedCountries) {
+            t6 = appliedCountries.length > 1 ? __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map({
+                "ComparisonPage[buildingBlocks.map()]": (bb_2)=>({
+                        name: bb_2.name,
+                        value: Math.round(appliedCountries.slice(1).reduce({
+                            "ComparisonPage[buildingBlocks.map() > (anonymous)()]": (sum, c_1)=>sum + c_1.buildingBlocks[bb_2.id].score
+                        }["ComparisonPage[buildingBlocks.map() > (anonymous)()]"], 0) / (appliedCountries.length - 1))
+                    })
+            }["ComparisonPage[buildingBlocks.map()]"]) : undefined;
+            $[11] = appliedCountries;
+            $[12] = t6;
+        } else {
+            t6 = $[12];
+        }
+        radarCompare = t6;
     } else {
-        t4 = $[10];
-    }
-    const radarCompare = t4;
-    let t5;
-    bb1: {
-        if (selectedCountries.length < 2) {
-            let t6;
-            if ($[11] === Symbol.for("react.memo_cache_sentinel")) {
-                t6 = [];
-                $[11] = t6;
+        let t4;
+        if ($[13] !== appliedIndicator) {
+            t4 = __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].find({
+                "ComparisonPage[buildingBlocks.find()]": (b)=>b.id === appliedIndicator
+            }["ComparisonPage[buildingBlocks.find()]"]);
+            $[13] = appliedIndicator;
+            $[14] = t4;
+        } else {
+            t4 = $[14];
+        }
+        const bb_3 = t4;
+        if (bb_3) {
+            singleIndicatorName = bb_3.name;
+            let t5;
+            if ($[15] !== appliedCountries || $[16] !== bb_3.id) {
+                let t6;
+                if ($[18] !== bb_3.id) {
+                    t6 = ({
+                        "ComparisonPage[appliedCountries.map()]": (c_2)=>({
+                                name: c_2.name,
+                                values: [
+                                    c_2.buildingBlocks[bb_3.id].score
+                                ]
+                            })
+                    })["ComparisonPage[appliedCountries.map()]"];
+                    $[18] = bb_3.id;
+                    $[19] = t6;
+                } else {
+                    t6 = $[19];
+                }
+                t5 = appliedCountries.map(t6);
+                $[15] = appliedCountries;
+                $[16] = bb_3.id;
+                $[17] = t5;
             } else {
-                t6 = $[11];
+                t5 = $[17];
             }
-            t5 = t6;
+            barData = t5;
+            let t6;
+            if ($[20] === Symbol.for("react.memo_cache_sentinel")) {
+                t6 = [];
+                $[20] = t6;
+            } else {
+                t6 = $[20];
+            }
+            radarData = t6;
+            radarCompare = undefined;
+        }
+    }
+    let t4;
+    bb1: {
+        if (appliedCountries.length < 2) {
+            let t5;
+            if ($[21] === Symbol.for("react.memo_cache_sentinel")) {
+                t5 = [];
+                $[21] = t5;
+            } else {
+                t5 = $[21];
+            }
+            t4 = t5;
             break bb1;
         }
         let results;
-        if ($[12] !== selectedCountries) {
+        if ($[22] !== appliedCountries || $[23] !== appliedIndicator) {
             results = [];
-            const best = selectedCountries.reduce(_ComparisonPageSelectedCountriesReduce);
-            results.push(`${best.name} leads with an overall score of ${(0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(best.buildingBlocks)}.`);
-            __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].forEach({
-                "ComparisonPage[buildingBlocks.forEach()]": (bb_3)=>{
-                    const scores = selectedCountries.map({
-                        "ComparisonPage[buildingBlocks.forEach() > selectedCountries.map()]": (c_2)=>({
-                                name: c_2.name,
-                                score: c_2.buildingBlocks[bb_3.id].score
-                            })
-                    }["ComparisonPage[buildingBlocks.forEach() > selectedCountries.map()]"]);
-                    const max = scores.reduce(_ComparisonPageBuildingBlocksForEachScoresReduce);
-                    const min = scores.reduce(_ComparisonPageBuildingBlocksForEachScoresReduce2);
-                    if (max.score - min.score > 20) {
-                        results.push(`Largest gap in ${bb_3.name}: ${max.name} (${max.score}) vs ${min.name} (${min.score}).`);
+            if (appliedIndicator === "all_building_blocks" || appliedIndicator === "overall") {
+                const best = appliedCountries.reduce(_ComparisonPageAppliedCountriesReduce);
+                results.push(`${best.name} demonstrates the most robust health system among the selected group, achieving a leading overall score of ${(0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(best.buildingBlocks)}.`);
+                __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].forEach({
+                    "ComparisonPage[buildingBlocks.forEach()]": (bb_4)=>{
+                        const scores = appliedCountries.map({
+                            "ComparisonPage[buildingBlocks.forEach() > appliedCountries.map()]": (c_3)=>({
+                                    name: c_3.name,
+                                    score: c_3.buildingBlocks[bb_4.id].score
+                                })
+                        }["ComparisonPage[buildingBlocks.forEach() > appliedCountries.map()]"]);
+                        const max = scores.reduce(_ComparisonPageBuildingBlocksForEachScoresReduce);
+                        const min = scores.reduce(_ComparisonPageBuildingBlocksForEachScoresReduce2);
+                        if (max.score - min.score > 20) {
+                            results.push(`There is a significant disparity of ${max.score - min.score} points in ${bb_4.name}, with ${max.name} outperforming ${min.name} (${max.score} vs ${min.score}).`);
+                        }
+                    }
+                }["ComparisonPage[buildingBlocks.forEach()]"]);
+            } else {
+                let t5;
+                if ($[25] !== appliedIndicator) {
+                    t5 = __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].find({
+                        "ComparisonPage[buildingBlocks.find()]": (b_3)=>b_3.id === appliedIndicator
+                    }["ComparisonPage[buildingBlocks.find()]"]);
+                    $[25] = appliedIndicator;
+                    $[26] = t5;
+                } else {
+                    t5 = $[26];
+                }
+                const bb_5 = t5;
+                if (bb_5) {
+                    let t6;
+                    if ($[27] !== appliedCountries || $[28] !== bb_5.id) {
+                        let t7;
+                        if ($[30] !== bb_5.id) {
+                            t7 = ({
+                                "ComparisonPage[appliedCountries.map()]": (c_4)=>({
+                                        name: c_4.name,
+                                        score: c_4.buildingBlocks[bb_5.id].score
+                                    })
+                            })["ComparisonPage[appliedCountries.map()]"];
+                            $[30] = bb_5.id;
+                            $[31] = t7;
+                        } else {
+                            t7 = $[31];
+                        }
+                        t6 = appliedCountries.map(t7).sort(_ComparisonPageAnonymous);
+                        $[27] = appliedCountries;
+                        $[28] = bb_5.id;
+                        $[29] = t6;
+                    } else {
+                        t6 = $[29];
+                    }
+                    const scores_0 = t6;
+                    results.push(`${scores_0[0].name} leads the peer group in ${bb_5.name} with a score of ${scores_0[0].score}.`);
+                    if (scores_0.length > 1) {
+                        const diff = scores_0[0].score - scores_0[scores_0.length - 1].score;
+                        if (diff > 15) {
+                            results.push(`${scores_0[scores_0.length - 1].name} lags behind with a ${bb_5.name} score of ${scores_0[scores_0.length - 1].score}, indicating a potential area for targeted capacity building.`);
+                        } else {
+                            results.push(`Performance in ${bb_5.name} is relatively consistent across the selected countries, with only a ${diff}-point gap between the highest and lowest performers.`);
+                        }
                     }
                 }
-            }["ComparisonPage[buildingBlocks.forEach()]"]);
-            $[12] = selectedCountries;
-            $[13] = results;
+            }
+            $[22] = appliedCountries;
+            $[23] = appliedIndicator;
+            $[24] = results;
         } else {
-            results = $[13];
+            results = $[24];
         }
-        t5 = results;
+        t4 = results;
     }
-    const insights = t5;
+    const insights = t4;
+    let t5;
+    if ($[32] !== chartType || $[33] !== selectedCountries || $[34] !== selectedIndicator) {
+        t5 = ({
+            "ComparisonPage[handleGenerate]": ()=>{
+                setAppliedCountries(selectedCountries);
+                setAppliedIndicator(selectedIndicator);
+                if (selectedIndicator !== "all_building_blocks" && selectedIndicator !== "overall" && chartType === "radar") {
+                    setChartType("bar");
+                }
+            }
+        })["ComparisonPage[handleGenerate]"];
+        $[32] = chartType;
+        $[33] = selectedCountries;
+        $[34] = selectedIndicator;
+        $[35] = t5;
+    } else {
+        t5 = $[35];
+    }
+    const handleGenerate = t5;
     let t6;
-    if ($[14] === Symbol.for("react.memo_cache_sentinel")) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            className: "text-[10px] font-semibold uppercase tracking-widest text-slate-400 mb-3 block",
+    if ($[36] === Symbol.for("react.memo_cache_sentinel")) {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+            className: "text-sm text-slate-600",
             children: "Select Countries"
         }, void 0, false, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 143,
+            lineNumber: 283,
             columnNumber: 10
         }, this);
-        $[14] = t6;
+        $[36] = t6;
     } else {
-        t6 = $[14];
+        t6 = $[36];
     }
     let t7;
-    if ($[15] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[37] !== isCountryDropdownOpen) {
         t7 = ({
-            "ComparisonPage[<input>.onChange]": (e)=>setSearchQuery(e.target.value)
-        })["ComparisonPage[<input>.onChange]"];
-        $[15] = t7;
+            "ComparisonPage[<button>.onClick]": ()=>setIsCountryDropdownOpen(!isCountryDropdownOpen)
+        })["ComparisonPage[<button>.onClick]"];
+        $[37] = isCountryDropdownOpen;
+        $[38] = t7;
     } else {
-        t7 = $[15];
+        t7 = $[38];
     }
     let t8;
-    if ($[16] !== searchQuery) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-            type: "text",
-            placeholder: "Search...",
-            value: searchQuery,
-            onChange: t7,
-            className: "w-full border border-slate-200 rounded-md px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-500/30"
-        }, void 0, false, {
-            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 159,
-            columnNumber: 10
-        }, this);
-        $[16] = searchQuery;
-        $[17] = t8;
-    } else {
-        t8 = $[17];
-    }
-    let t9;
-    if ($[18] !== filteredCountries || $[19] !== selectedIds || $[20] !== toggleCountry) {
-        let t10;
-        if ($[22] !== selectedIds || $[23] !== toggleCountry) {
-            t10 = ({
-                "ComparisonPage[filteredCountries.map()]": (c_3)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: {
-                            "ComparisonPage[filteredCountries.map() > <button>.onClick]": ()=>toggleCountry(c_3.id)
-                        }["ComparisonPage[filteredCountries.map() > <button>.onClick]"],
-                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full text-left px-3 py-2 rounded-md text-sm flex items-center gap-2 transition-colors", selectedIds.includes(c_3.id) ? "bg-orange-50 text-orange-700" : "text-slate-600 hover:bg-slate-50"),
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$shared$2f$CountryFlag$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CountryFlag"], {
-                                code: c_3.code,
-                                name: c_3.name
-                            }, void 0, false, {
-                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 172,
-                                columnNumber: 280
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "truncate",
-                                children: c_3.name
-                            }, void 0, false, {
-                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 172,
-                                columnNumber: 327
-                            }, this),
-                            selectedIds.includes(c_3.id) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
-                                className: "w-4 h-4 text-orange-500 ml-auto flex-shrink-0"
-                            }, void 0, false, {
-                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 172,
-                                columnNumber: 404
-                            }, this)
-                        ]
-                    }, c_3.id, true, {
-                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 170,
-                        columnNumber: 59
-                    }, this)
-            })["ComparisonPage[filteredCountries.map()]"];
-            $[22] = selectedIds;
-            $[23] = toggleCountry;
-            $[24] = t10;
-        } else {
-            t10 = $[24];
-        }
-        t9 = filteredCountries.map(t10);
-        $[18] = filteredCountries;
-        $[19] = selectedIds;
-        $[20] = toggleCountry;
-        $[21] = t9;
-    } else {
-        t9 = $[21];
-    }
-    let t10;
-    if ($[25] !== t9) {
-        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex-1 overflow-y-auto space-y-1 pr-1",
-            children: t9
-        }, void 0, false, {
-            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 190,
-            columnNumber: 11
-        }, this);
-        $[25] = t9;
-        $[26] = t10;
-    } else {
-        t10 = $[26];
-    }
-    let t11;
-    if ($[27] !== t10 || $[28] !== t8) {
-        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
-            className: "w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full overflow-hidden p-4",
+    if ($[39] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex items-center gap-2",
             children: [
-                t6,
-                t8,
-                t10
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                    className: "w-4 h-4 text-slate-400"
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 300,
+                    columnNumber: 51
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    children: "Choose by Country"
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 300,
+                    columnNumber: 96
+                }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 198,
+            lineNumber: 300,
+            columnNumber: 10
+        }, this);
+        $[39] = t8;
+    } else {
+        t8 = $[39];
+    }
+    const t9 = isCountryDropdownOpen && "rotate-180";
+    let t10;
+    if ($[40] !== t9) {
+        t10 = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-4 h-4 text-slate-400 transition-transform", t9);
+        $[40] = t9;
+        $[41] = t10;
+    } else {
+        t10 = $[41];
+    }
+    let t11;
+    if ($[42] !== t10) {
+        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+            className: t10
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 316,
             columnNumber: 11
         }, this);
-        $[27] = t10;
-        $[28] = t8;
-        $[29] = t11;
+        $[42] = t10;
+        $[43] = t11;
     } else {
-        t11 = $[29];
+        t11 = $[43];
     }
-    const sidebar = t11;
     let t12;
-    if ($[30] === Symbol.for("react.memo_cache_sentinel")) {
-        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    if ($[44] !== t11 || $[45] !== t7) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            onClick: t7,
+            className: "w-full flex items-center justify-between border border-slate-200 bg-slate-50/50 rounded-lg px-3 py-2.5 text-sm text-slate-500 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500/30",
+            children: [
+                t8,
+                t11
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 324,
+            columnNumber: 11
+        }, this);
+        $[44] = t11;
+        $[45] = t7;
+        $[46] = t12;
+    } else {
+        t12 = $[46];
+    }
+    let t13;
+    if ($[47] !== filteredCountries || $[48] !== isCountryDropdownOpen || $[49] !== searchQuery || $[50] !== selectedIds || $[51] !== toggleCountry) {
+        t13 = isCountryDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "absolute top-12 left-0 w-full bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden flex flex-col max-h-[250px]",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                    type: "text",
+                    placeholder: "Search countries...",
+                    value: searchQuery,
+                    onChange: {
+                        "ComparisonPage[<input>.onChange]": (e)=>setSearchQuery(e.target.value)
+                    }["ComparisonPage[<input>.onChange]"],
+                    className: "w-full border-b border-slate-100 px-3 py-2 text-sm focus:outline-none bg-slate-50"
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 333,
+                    columnNumber: 181
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex-1 overflow-y-auto",
+                    children: filteredCountries.map({
+                        "ComparisonPage[filteredCountries.map()]": (c_5)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: {
+                                    "ComparisonPage[filteredCountries.map() > <button>.onClick]": ()=>{
+                                        toggleCountry(c_5.id);
+                                        setIsCountryDropdownOpen(false);
+                                    }
+                                }["ComparisonPage[filteredCountries.map() > <button>.onClick]"],
+                                className: "w-full text-left px-3 py-2 text-sm flex items-center gap-2 hover:bg-slate-50 transition-colors",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 transition-colors", selectedIds.includes(c_5.id) ? "bg-orange-500 border-orange-500" : "border-slate-300 bg-white"),
+                                        children: selectedIds.includes(c_5.id) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
+                                            className: "w-3 h-3 text-white"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                            lineNumber: 341,
+                                            columnNumber: 423
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                        lineNumber: 341,
+                                        columnNumber: 183
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$shared$2f$CountryFlag$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CountryFlag"], {
+                                        code: c_5.code,
+                                        name: c_5.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                        lineNumber: 341,
+                                        columnNumber: 470
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("truncate", selectedIds.includes(c_5.id) ? "text-slate-900 font-medium" : "text-slate-600"),
+                                        children: c_5.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                        lineNumber: 341,
+                                        columnNumber: 517
+                                    }, this)
+                                ]
+                            }, c_5.id, true, {
+                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                lineNumber: 336,
+                                columnNumber: 61
+                            }, this)
+                    }["ComparisonPage[filteredCountries.map()]"])
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 335,
+                    columnNumber: 142
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 333,
+            columnNumber: 36
+        }, this);
+        $[47] = filteredCountries;
+        $[48] = isCountryDropdownOpen;
+        $[49] = searchQuery;
+        $[50] = selectedIds;
+        $[51] = toggleCountry;
+        $[52] = t13;
+    } else {
+        t13 = $[52];
+    }
+    let t14;
+    if ($[53] !== t12 || $[54] !== t13) {
+        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "relative",
+            children: [
+                t12,
+                t13
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 354,
+            columnNumber: 11
+        }, this);
+        $[53] = t12;
+        $[54] = t13;
+        $[55] = t14;
+    } else {
+        t14 = $[55];
+    }
+    let t15;
+    if ($[56] !== isCountryDropdownOpen || $[57] !== selectedCountries || $[58] !== toggleCountry) {
+        t15 = selectedCountries.length > 0 && !isCountryDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex flex-wrap gap-1 mt-1",
+            children: selectedCountries.map({
+                "ComparisonPage[selectedCountries.map()]": (c_6)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "inline-flex items-center gap-1 bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-xs",
+                        children: [
+                            c_6.name,
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: {
+                                    "ComparisonPage[selectedCountries.map() > <button>.onClick]": ()=>toggleCountry(c_6.id)
+                                }["ComparisonPage[selectedCountries.map() > <button>.onClick]"],
+                                className: "hover:text-red-500 focus:outline-none",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                    className: "w-3 h-3"
+                                }, void 0, false, {
+                                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                    lineNumber: 366,
+                                    columnNumber: 126
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                lineNumber: 364,
+                                columnNumber: 187
+                            }, this)
+                        ]
+                    }, c_6.id, true, {
+                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                        lineNumber: 364,
+                        columnNumber: 59
+                    }, this)
+            }["ComparisonPage[selectedCountries.map()]"])
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 363,
+            columnNumber: 69
+        }, this);
+        $[56] = isCountryDropdownOpen;
+        $[57] = selectedCountries;
+        $[58] = toggleCountry;
+        $[59] = t15;
+    } else {
+        t15 = $[59];
+    }
+    let t16;
+    if ($[60] !== t14 || $[61] !== t15) {
+        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex flex-col gap-2 relative z-20",
+            children: [
+                t6,
+                t14,
+                t15
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 377,
+            columnNumber: 11
+        }, this);
+        $[60] = t14;
+        $[61] = t15;
+        $[62] = t16;
+    } else {
+        t16 = $[62];
+    }
+    let t17;
+    if ($[63] === Symbol.for("react.memo_cache_sentinel")) {
+        t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+            className: "text-sm text-slate-600",
+            children: "Select Indicator"
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 386,
+            columnNumber: 11
+        }, this);
+        $[63] = t17;
+    } else {
+        t17 = $[63];
+    }
+    let t18;
+    if ($[64] !== isIndicatorDropdownOpen) {
+        t18 = ({
+            "ComparisonPage[<button>.onClick]": ()=>setIsIndicatorDropdownOpen(!isIndicatorDropdownOpen)
+        })["ComparisonPage[<button>.onClick]"];
+        $[64] = isIndicatorDropdownOpen;
+        $[65] = t18;
+    } else {
+        t18 = $[65];
+    }
+    let t19;
+    if ($[66] !== selectedIndicator) {
+        t19 = selectedIndicator === "all_building_blocks" ? "All Building Blocks" : selectedIndicator === "overall" ? "Overall Health Score" : __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].find({
+            "ComparisonPage[buildingBlocks.find()]": (b_5)=>b_5.id === selectedIndicator
+        }["ComparisonPage[buildingBlocks.find()]"])?.name || "Choose indicator";
+        $[66] = selectedIndicator;
+        $[67] = t19;
+    } else {
+        t19 = $[67];
+    }
+    let t20;
+    if ($[68] !== t19) {
+        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            className: "truncate",
+            children: t19
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 413,
+            columnNumber: 11
+        }, this);
+        $[68] = t19;
+        $[69] = t20;
+    } else {
+        t20 = $[69];
+    }
+    const t21 = isIndicatorDropdownOpen && "rotate-180";
+    let t22;
+    if ($[70] !== t21) {
+        t22 = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-4 h-4 text-slate-400 transition-transform", t21);
+        $[70] = t21;
+        $[71] = t22;
+    } else {
+        t22 = $[71];
+    }
+    let t23;
+    if ($[72] !== t22) {
+        t23 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+            className: t22
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 430,
+            columnNumber: 11
+        }, this);
+        $[72] = t22;
+        $[73] = t23;
+    } else {
+        t23 = $[73];
+    }
+    let t24;
+    if ($[74] !== t18 || $[75] !== t20 || $[76] !== t23) {
+        t24 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            onClick: t18,
+            className: "w-full flex items-center justify-between border border-slate-200 bg-slate-50/50 rounded-lg px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500/30",
+            children: [
+                t20,
+                t23
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 438,
+            columnNumber: 11
+        }, this);
+        $[74] = t18;
+        $[75] = t20;
+        $[76] = t23;
+        $[77] = t24;
+    } else {
+        t24 = $[77];
+    }
+    let t25;
+    if ($[78] !== isIndicatorDropdownOpen || $[79] !== selectedIndicator) {
+        t25 = isIndicatorDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "absolute top-12 left-0 w-full bg-white border border-slate-200 rounded-lg shadow-lg overflow-y-auto max-h-[250px]",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: {
+                        "ComparisonPage[<button>.onClick]": ()=>{
+                            setSelectedIndicator("all_building_blocks");
+                            setIsIndicatorDropdownOpen(false);
+                        }
+                    }["ComparisonPage[<button>.onClick]"],
+                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full text-left px-3 py-2.5 text-sm transition-colors", selectedIndicator === "all_building_blocks" ? "bg-orange-50 text-orange-700 font-medium" : "text-slate-700 hover:bg-slate-50"),
+                    children: "All Building Blocks"
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 448,
+                    columnNumber: 169
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: {
+                        "ComparisonPage[<button>.onClick]": ()=>{
+                            setSelectedIndicator("overall");
+                            setIsIndicatorDropdownOpen(false);
+                        }
+                    }["ComparisonPage[<button>.onClick]"],
+                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full text-left px-3 py-2.5 text-sm transition-colors", selectedIndicator === "overall" ? "bg-orange-50 text-orange-700 font-medium" : "text-slate-700 hover:bg-slate-50"),
+                    children: "Overall Health Score"
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 453,
+                    columnNumber: 274
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400 bg-slate-50 border-y border-slate-100",
+                    children: "Specific Building Blocks"
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 458,
+                    columnNumber: 263
+                }, this),
+                __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map({
+                    "ComparisonPage[buildingBlocks.map()]": (bb_6)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: {
+                                "ComparisonPage[buildingBlocks.map() > <button>.onClick]": ()=>{
+                                    setSelectedIndicator(bb_6.id);
+                                    setIsIndicatorDropdownOpen(false);
+                                }
+                            }["ComparisonPage[buildingBlocks.map() > <button>.onClick]"],
+                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full text-left px-3 py-2.5 text-sm transition-colors", selectedIndicator === bb_6.id ? "bg-orange-50 text-orange-700 font-medium" : "text-slate-700 hover:bg-slate-50"),
+                            children: bb_6.name
+                        }, bb_6.id, false, {
+                            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                            lineNumber: 459,
+                            columnNumber: 57
+                        }, this)
+                }["ComparisonPage[buildingBlocks.map()]"])
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 448,
+            columnNumber: 38
+        }, this);
+        $[78] = isIndicatorDropdownOpen;
+        $[79] = selectedIndicator;
+        $[80] = t25;
+    } else {
+        t25 = $[80];
+    }
+    let t26;
+    if ($[81] !== t24 || $[82] !== t25) {
+        t26 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex flex-col gap-2 relative z-10",
+            children: [
+                t17,
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative",
+                    children: [
+                        t24,
+                        t25
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 474,
+                    columnNumber: 67
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 474,
+            columnNumber: 11
+        }, this);
+        $[81] = t24;
+        $[82] = t25;
+        $[83] = t26;
+    } else {
+        t26 = $[83];
+    }
+    const t27 = selectedCountries.length === 0;
+    let t28;
+    if ($[84] === Symbol.for("react.memo_cache_sentinel")) {
+        t28 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__["BarChart3"], {
+            className: "w-4 h-4"
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 484,
+            columnNumber: 11
+        }, this);
+        $[84] = t28;
+    } else {
+        t28 = $[84];
+    }
+    let t29;
+    if ($[85] !== handleGenerate || $[86] !== t27) {
+        t29 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mt-auto pt-4 relative z-0",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: handleGenerate,
+                disabled: t27,
+                className: "w-full bg-[#F59E0B] hover:bg-[#D97706] disabled:bg-slate-200 disabled:text-slate-400 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:ring-offset-2",
+                children: [
+                    t28,
+                    "Generate Comparison"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                lineNumber: 491,
+                columnNumber: 54
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 491,
+            columnNumber: 11
+        }, this);
+        $[85] = handleGenerate;
+        $[86] = t27;
+        $[87] = t29;
+    } else {
+        t29 = $[87];
+    }
+    let t30;
+    if ($[88] !== t16 || $[89] !== t26 || $[90] !== t29) {
+        t30 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
+            className: "w-[300px] bg-white rounded-xl shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-5 gap-6",
+            children: [
+                t16,
+                t26,
+                t29
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 500,
+            columnNumber: 11
+        }, this);
+        $[88] = t16;
+        $[89] = t26;
+        $[90] = t29;
+        $[91] = t30;
+    } else {
+        t30 = $[91];
+    }
+    const sidebar = t30;
+    let t31;
+    if ($[92] === Symbol.for("react.memo_cache_sentinel")) {
+        t31 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                     className: "text-xl font-bold text-slate-900",
                     children: "Comparison Matrix"
                 }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                    lineNumber: 208,
+                    lineNumber: 511,
                     columnNumber: 16
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1987,132 +2522,174 @@ function ComparisonPage() {
                     children: "Compare health system performance across multiple countries"
                 }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                    lineNumber: 208,
+                    lineNumber: 511,
                     columnNumber: 87
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 208,
+            lineNumber: 511,
             columnNumber: 11
         }, this);
-        $[30] = t12;
+        $[92] = t31;
     } else {
-        t12 = $[30];
+        t31 = $[92];
     }
-    let t13;
-    if ($[31] === Symbol.for("react.memo_cache_sentinel")) {
-        t13 = [
-            "bar",
-            "radar",
-            "line"
-        ];
-        $[31] = t13;
+    let t32;
+    if ($[93] !== appliedIndicator || $[94] !== chartType) {
+        t32 = (appliedIndicator === "all_building_blocks" || appliedIndicator === "overall") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0",
+            children: [
+                "radar",
+                "bar",
+                "line"
+            ].map({
+                "ComparisonPage[(anonymous)()]": (t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: {
+                            "ComparisonPage[(anonymous)() > <button>.onClick]": ()=>setChartType(t)
+                        }["ComparisonPage[(anonymous)() > <button>.onClick]"],
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("px-4 py-1.5 rounded-md text-sm font-medium transition-colors capitalize", chartType === t ? "bg-white text-orange-600 shadow-sm" : "text-slate-600 hover:text-slate-900"),
+                        children: t
+                    }, t, false, {
+                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                        lineNumber: 519,
+                        columnNumber: 47
+                    }, this)
+            }["ComparisonPage[(anonymous)()]"])
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 518,
+            columnNumber: 93
+        }, this);
+        $[93] = appliedIndicator;
+        $[94] = chartType;
+        $[95] = t32;
     } else {
-        t13 = $[31];
+        t32 = $[95];
     }
-    let t14;
-    if ($[32] !== chartType) {
-        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t33;
+    if ($[96] !== appliedIndicator || $[97] !== chartType) {
+        t33 = appliedIndicator !== "all_building_blocks" && appliedIndicator !== "overall" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0",
+            children: [
+                "bar",
+                "line"
+            ].map({
+                "ComparisonPage[(anonymous)()]": (t_0)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: {
+                            "ComparisonPage[(anonymous)() > <button>.onClick]": ()=>setChartType(t_0)
+                        }["ComparisonPage[(anonymous)() > <button>.onClick]"],
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("px-4 py-1.5 rounded-md text-sm font-medium transition-colors capitalize", chartType === t_0 ? "bg-white text-orange-600 shadow-sm" : "text-slate-600 hover:text-slate-900"),
+                        children: t_0
+                    }, t_0, false, {
+                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                        lineNumber: 532,
+                        columnNumber: 49
+                    }, this)
+            }["ComparisonPage[(anonymous)()]"])
+        }, void 0, false, {
+            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+            lineNumber: 531,
+            columnNumber: 91
+        }, this);
+        $[96] = appliedIndicator;
+        $[97] = chartType;
+        $[98] = t33;
+    } else {
+        t33 = $[98];
+    }
+    let t34;
+    if ($[99] !== t32 || $[100] !== t33) {
+        t34 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex flex-col md:flex-row md:items-end justify-between gap-4",
             children: [
-                t12,
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0",
-                    children: t13.map({
-                        "ComparisonPage[(anonymous)()]": (t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: {
-                                    "ComparisonPage[(anonymous)() > <button>.onClick]": ()=>setChartType(t)
-                                }["ComparisonPage[(anonymous)() > <button>.onClick]"],
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("px-4 py-1.5 rounded-md text-sm font-medium transition-colors capitalize", chartType === t ? "bg-white text-orange-600 shadow-sm" : "text-slate-600 hover:text-slate-900"),
-                                children: t
-                            }, t, false, {
-                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 223,
-                                columnNumber: 49
-                            }, this)
-                    }["ComparisonPage[(anonymous)()]"])
-                }, void 0, false, {
-                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                    lineNumber: 222,
-                    columnNumber: 94
-                }, this)
+                t31,
+                t32,
+                t33
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 222,
+            lineNumber: 544,
             columnNumber: 11
         }, this);
-        $[32] = chartType;
-        $[33] = t14;
+        $[99] = t32;
+        $[100] = t33;
+        $[101] = t34;
     } else {
-        t14 = $[33];
+        t34 = $[101];
     }
-    let t15;
-    if ($[34] !== selectedCountries || $[35] !== toggleCountry) {
-        t15 = selectedCountries.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t35;
+    if ($[102] !== appliedCountries || $[103] !== toggleCountry) {
+        t35 = appliedCountries.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex flex-wrap gap-2",
-            children: selectedCountries.map({
-                "ComparisonPage[selectedCountries.map()]": (c_4)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: appliedCountries.map({
+                "ComparisonPage[appliedCountries.map()]": (c_7)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-1.5 bg-orange-50 border border-orange-200 px-3 py-1.5 rounded-full text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$shared$2f$CountryFlag$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CountryFlag"], {
-                                code: c_4.code,
-                                name: c_4.name
+                                code: c_7.code,
+                                name: c_7.name
                             }, void 0, false, {
                                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 235,
-                                columnNumber: 186
+                                lineNumber: 554,
+                                columnNumber: 185
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "font-medium text-slate-800",
-                                children: c_4.name
+                                children: c_7.name
                             }, void 0, false, {
                                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 235,
-                                columnNumber: 233
+                                lineNumber: 554,
+                                columnNumber: 232
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: {
-                                    "ComparisonPage[selectedCountries.map() > <button>.onClick]": ()=>toggleCountry(c_4.id)
-                                }["ComparisonPage[selectedCountries.map() > <button>.onClick]"],
+                                    "ComparisonPage[appliedCountries.map() > <button>.onClick]": ()=>{
+                                        toggleCountry(c_7.id);
+                                        setAppliedCountries({
+                                            "ComparisonPage[appliedCountries.map() > <button>.onClick > setAppliedCountries()]": (prev)=>prev.filter({
+                                                    "ComparisonPage[appliedCountries.map() > <button>.onClick > setAppliedCountries() > prev.filter()]": (ac)=>ac.id !== c_7.id
+                                                }["ComparisonPage[appliedCountries.map() > <button>.onClick > setAppliedCountries() > prev.filter()]"])
+                                        }["ComparisonPage[appliedCountries.map() > <button>.onClick > setAppliedCountries()]"]);
+                                    }
+                                }["ComparisonPage[appliedCountries.map() > <button>.onClick]"],
                                 className: "ml-1 text-slate-400 hover:text-orange-600 transition-colors p-0.5 rounded-full hover:bg-orange-100 focus:outline-none",
-                                "aria-label": `Remove ${c_4.name}`,
+                                "aria-label": `Remove ${c_7.name}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                     className: "w-3.5 h-3.5"
                                 }, void 0, false, {
                                     fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                    lineNumber: 237,
-                                    columnNumber: 240
+                                    lineNumber: 563,
+                                    columnNumber: 239
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 235,
-                                columnNumber: 295
+                                lineNumber: 554,
+                                columnNumber: 294
                             }, this)
                         ]
-                    }, c_4.id, true, {
+                    }, c_7.id, true, {
                         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 235,
-                        columnNumber: 59
+                        lineNumber: 554,
+                        columnNumber: 58
                     }, this)
-            }["ComparisonPage[selectedCountries.map()]"])
+            }["ComparisonPage[appliedCountries.map()]"])
         }, void 0, false, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 234,
-            columnNumber: 43
+            lineNumber: 553,
+            columnNumber: 42
         }, this);
-        $[34] = selectedCountries;
-        $[35] = toggleCountry;
-        $[36] = t15;
+        $[102] = appliedCountries;
+        $[103] = toggleCountry;
+        $[104] = t35;
     } else {
-        t15 = $[36];
+        t35 = $[104];
     }
-    let t16;
-    if ($[37] !== barData || $[38] !== chartType || $[39] !== radarCompare || $[40] !== radarData || $[41] !== selectedCountries[0]?.name || $[42] !== selectedCountries.length) {
-        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t36;
+    if ($[105] !== appliedCountries[0]?.name || $[106] !== appliedCountries.length || $[107] !== appliedIndicator || $[108] !== barData || $[109] !== chartType || $[110] !== radarCompare || $[111] !== radarData || $[112] !== singleIndicatorName) {
+        t36 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "bg-white rounded-xl shadow-sm border border-slate-100 p-4",
-            children: selectedCountries.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: appliedCountries.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "h-[400px] flex flex-col items-center justify-center text-center p-6 bg-slate-50/50 rounded-xl border border-dashed border-slate-200",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2121,148 +2698,203 @@ function ComparisonPage() {
                             className: "w-8 h-8 text-orange-400"
                         }, void 0, false, {
                             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                            lineNumber: 247,
-                            columnNumber: 327
+                            lineNumber: 573,
+                            columnNumber: 326
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 247,
-                        columnNumber: 269
+                        lineNumber: 573,
+                        columnNumber: 268
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                         className: "text-lg font-semibold text-slate-800 mb-2",
-                        children: "No Countries Selected"
+                        children: "No Countries Generated"
                     }, void 0, false, {
                         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 247,
-                        columnNumber: 382
+                        lineNumber: 573,
+                        columnNumber: 381
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-sm text-slate-500 max-w-sm",
-                        children: "Select countries from the sidebar to compare their health system performance and generate insights."
+                        children: "Select countries and an indicator from the sidebar, then click Generate Comparison."
                     }, void 0, false, {
                         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 247,
+                        lineNumber: 573,
                         columnNumber: 466
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 247,
-                columnNumber: 120
+                lineNumber: 573,
+                columnNumber: 119
             }, this) : chartType === "bar" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$charts$2f$BarChart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BarChart"], {
-                categories: bbNames,
+                categories: appliedIndicator === "all_building_blocks" || appliedIndicator === "overall" ? bbNames : [
+                    singleIndicatorName
+                ],
                 data: barData,
                 height: 400
             }, void 0, false, {
                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 247,
-                columnNumber: 647
-            }, this) : chartType === "radar" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$charts$2f$RadarChart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["RadarChart"], {
+                lineNumber: 573,
+                columnNumber: 631
+            }, this) : chartType === "radar" && radarData.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$charts$2f$RadarChart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["RadarChart"], {
                 data: radarData,
                 compareData: radarCompare,
-                title: selectedCountries[0]?.name,
+                title: appliedCountries[0]?.name,
                 height: 400
             }, void 0, false, {
                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 247,
-                columnNumber: 735
+                lineNumber: 573,
+                columnNumber: 846
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$charts$2f$LineChart$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LineChart"], {
-                categories: bbNames,
+                categories: appliedIndicator === "all_building_blocks" || appliedIndicator === "overall" ? bbNames : [
+                    singleIndicatorName
+                ],
                 data: barData,
                 height: 400
             }, void 0, false, {
                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 247,
-                columnNumber: 844
+                lineNumber: 573,
+                columnNumber: 954
             }, this)
         }, void 0, false, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 247,
+            lineNumber: 573,
             columnNumber: 11
         }, this);
-        $[37] = barData;
-        $[38] = chartType;
-        $[39] = radarCompare;
-        $[40] = radarData;
-        $[41] = selectedCountries[0]?.name;
-        $[42] = selectedCountries.length;
-        $[43] = t16;
+        $[105] = appliedCountries[0]?.name;
+        $[106] = appliedCountries.length;
+        $[107] = appliedIndicator;
+        $[108] = barData;
+        $[109] = chartType;
+        $[110] = radarCompare;
+        $[111] = radarData;
+        $[112] = singleIndicatorName;
+        $[113] = t36;
     } else {
-        t16 = $[43];
+        t36 = $[113];
     }
-    let t17;
-    if ($[44] !== selectedCountries) {
-        t17 = selectedCountries.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "overflow-x-auto",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
-                    className: "w-full text-sm",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                className: "border-b border-slate-100",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "text-left px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-400",
-                                        children: "Country"
-                                    }, void 0, false, {
-                                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                        lineNumber: 260,
-                                        columnNumber: 246
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                        className: "text-center px-3 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-400",
-                                        children: "Overall"
-                                    }, void 0, false, {
-                                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                        lineNumber: 260,
-                                        columnNumber: 361
-                                    }, this),
-                                    __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map(_ComparisonPageBuildingBlocksMap2)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                                lineNumber: 260,
-                                columnNumber: 204
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                            lineNumber: 260,
-                            columnNumber: 197
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                            children: selectedCountries.map(_ComparisonPageSelectedCountriesMap2)
-                        }, void 0, false, {
-                            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                            lineNumber: 260,
-                            columnNumber: 546
-                        }, this)
-                    ]
-                }, void 0, true, {
+    let t37;
+    if ($[114] !== appliedCountries) {
+        t37 = appliedCountries.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                    className: "text-lg font-semibold text-slate-800 mb-4 px-1",
+                    children: "Detailed Breakdown"
+                }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                    lineNumber: 260,
-                    columnNumber: 163
+                    lineNumber: 588,
+                    columnNumber: 47
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "overflow-x-auto",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                            className: "w-full text-sm",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
+                                    className: "bg-slate-50/50 border-b border-slate-100",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                className: "text-left px-5 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400",
+                                                children: "Country"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                                lineNumber: 588,
+                                                columnNumber: 351
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                className: "text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400",
+                                                children: "Overall"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                                lineNumber: 588,
+                                                columnNumber: 466
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                className: "text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap",
+                                                children: "Pop. (M)"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                                lineNumber: 588,
+                                                columnNumber: 583
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                className: "text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap",
+                                                children: "Exp./Capita"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                                lineNumber: 588,
+                                                columnNumber: 719
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                className: "text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap",
+                                                children: "Health/GDP %"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                                lineNumber: 588,
+                                                columnNumber: 858
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                className: "text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap",
+                                                children: "Debt Service %"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                                lineNumber: 588,
+                                                columnNumber: 998
+                                            }, this),
+                                            __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map(_ComparisonPageBuildingBlocksMap2)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                        lineNumber: 588,
+                                        columnNumber: 347
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                    lineNumber: 588,
+                                    columnNumber: 287
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                                    className: "divide-y divide-slate-100",
+                                    children: appliedCountries.map(_ComparisonPageAppliedCountriesMap2)
+                                }, void 0, false, {
+                                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                                    lineNumber: 588,
+                                    columnNumber: 1208
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                            lineNumber: 588,
+                            columnNumber: 253
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                        lineNumber: 588,
+                        columnNumber: 220
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                    lineNumber: 588,
+                    columnNumber: 133
                 }, this)
-            }, void 0, false, {
-                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 260,
-                columnNumber: 130
-            }, this)
-        }, void 0, false, {
+            ]
+        }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 260,
-            columnNumber: 43
+            lineNumber: 588,
+            columnNumber: 42
         }, this);
-        $[44] = selectedCountries;
-        $[45] = t17;
+        $[114] = appliedCountries;
+        $[115] = t37;
     } else {
-        t17 = $[45];
+        t37 = $[115];
     }
-    let t18;
-    if ($[46] !== insights) {
-        t18 = insights.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t38;
+    if ($[116] !== insights) {
+        t38 = insights.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "bg-white rounded-xl shadow-sm border border-slate-100 p-4",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2270,7 +2902,7 @@ function ComparisonPage() {
                     children: "Auto-Generated Insights"
                 }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                    lineNumber: 268,
+                    lineNumber: 596,
                     columnNumber: 109
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2278,81 +2910,81 @@ function ComparisonPage() {
                     children: insights.map(_ComparisonPageInsightsMap)
                 }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                    lineNumber: 268,
+                    lineNumber: 596,
                     columnNumber: 223
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 268,
+            lineNumber: 596,
             columnNumber: 34
         }, this);
-        $[46] = insights;
-        $[47] = t18;
+        $[116] = insights;
+        $[117] = t38;
     } else {
-        t18 = $[47];
+        t38 = $[117];
     }
-    let t19;
-    if ($[48] !== t16 || $[49] !== t17 || $[50] !== t18) {
-        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t39;
+    if ($[118] !== t36 || $[119] !== t37 || $[120] !== t38) {
+        t39 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "space-y-6",
             children: [
-                t16,
-                t17,
-                t18
+                t36,
+                t37,
+                t38
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 276,
+            lineNumber: 604,
             columnNumber: 11
         }, this);
-        $[48] = t16;
-        $[49] = t17;
-        $[50] = t18;
-        $[51] = t19;
+        $[118] = t36;
+        $[119] = t37;
+        $[120] = t38;
+        $[121] = t39;
     } else {
-        t19 = $[51];
+        t39 = $[121];
     }
-    let t20;
-    if ($[52] !== t14 || $[53] !== t15 || $[54] !== t19) {
-        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t40;
+    if ($[122] !== t34 || $[123] !== t35 || $[124] !== t39) {
+        t40 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "p-6 space-y-6",
             children: [
-                t14,
-                t15,
-                t19
+                t34,
+                t35,
+                t39
             ]
         }, void 0, true, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 286,
+            lineNumber: 614,
             columnNumber: 11
         }, this);
-        $[52] = t14;
-        $[53] = t15;
-        $[54] = t19;
-        $[55] = t20;
+        $[122] = t34;
+        $[123] = t35;
+        $[124] = t39;
+        $[125] = t40;
     } else {
-        t20 = $[55];
+        t40 = $[125];
     }
-    let t21;
-    if ($[56] !== sidebar || $[57] !== t20) {
-        t21 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$layout$2f$PageLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PageLayout"], {
+    let t41;
+    if ($[126] !== sidebar || $[127] !== t40) {
+        t41 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$layout$2f$PageLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PageLayout"], {
             sidebar: sidebar,
-            children: t20
+            children: t40
         }, void 0, false, {
             fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-            lineNumber: 296,
+            lineNumber: 624,
             columnNumber: 11
         }, this);
-        $[56] = sidebar;
-        $[57] = t20;
-        $[58] = t21;
+        $[126] = sidebar;
+        $[127] = t40;
+        $[128] = t41;
     } else {
-        t21 = $[58];
+        t41 = $[128];
     }
-    return t21;
+    return t41;
 }
-_s(ComparisonPage, "FD74H83Dhm6yIB4VhZkKer/RTcM=", false, function() {
+_s(ComparisonPage, "obW11shNJ3MQY7cr6xEx9ohV32g=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$hooks$2f$useComparison$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useComparison"]
     ];
@@ -2366,106 +2998,157 @@ function _ComparisonPageInsightsMap(insight, i) {
                 className: "w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"
             }, void 0, false, {
                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 306,
+                lineNumber: 634,
                 columnNumber: 80
             }, this),
             insight
         ]
     }, i, true, {
         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-        lineNumber: 306,
+        lineNumber: 634,
         columnNumber: 10
     }, this);
 }
-function _ComparisonPageSelectedCountriesMap2(c_5) {
+function _ComparisonPageAppliedCountriesMap2(c_8) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-        className: "border-b border-slate-50 hover:bg-slate-50",
+        className: "hover:bg-slate-50 transition-colors",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                className: "px-4 py-3 flex items-center gap-2",
+                className: "px-5 py-3.5 flex items-center gap-2 min-w-[140px]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$shared$2f$CountryFlag$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CountryFlag"], {
-                        code: c_5.code,
-                        name: c_5.name
+                        code: c_8.code,
+                        name: c_8.name
                     }, void 0, false, {
                         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 309,
-                        columnNumber: 132
+                        lineNumber: 637,
+                        columnNumber: 141
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-medium text-slate-800",
-                        children: c_5.name
+                        className: "font-medium text-slate-800 text-sm whitespace-nowrap",
+                        children: c_8.name
                     }, void 0, false, {
                         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 309,
-                        columnNumber: 179
+                        lineNumber: 637,
+                        columnNumber: 188
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 309,
-                columnNumber: 82
+                lineNumber: 637,
+                columnNumber: 75
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                className: "text-center px-3 py-3",
+                className: "px-4 py-3.5 text-center",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$components$2f$shared$2f$ScoreBadge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScoreBadge"], {
-                    score: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(c_5.buildingBlocks),
+                    score: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(c_8.buildingBlocks),
                     size: "sm"
                 }, void 0, false, {
                     fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                    lineNumber: 309,
-                    columnNumber: 284
+                    lineNumber: 637,
+                    columnNumber: 321
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                lineNumber: 309,
-                columnNumber: 246
+                lineNumber: 637,
+                columnNumber: 281
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                className: "px-4 py-3.5 text-center text-slate-600 font-mono-data",
+                children: c_8.population.toFixed(1)
+            }, void 0, false, {
+                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                lineNumber: 637,
+                columnNumber: 400
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                className: "px-4 py-3.5 text-center text-slate-600 font-mono-data",
+                children: [
+                    "$",
+                    c_8.healthExpPerCapita
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                lineNumber: 637,
+                columnNumber: 502
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                className: "px-4 py-3.5 text-center text-slate-600 font-mono-data",
+                children: [
+                    c_8.healthGdpPercent.toFixed(1),
+                    "%"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                lineNumber: 637,
+                columnNumber: 602
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                className: "px-4 py-3.5 text-center text-slate-600 font-mono-data",
+                children: [
+                    c_8.debtServiceRatio.toFixed(1),
+                    "%"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                lineNumber: 637,
+                columnNumber: 711
             }, this),
             __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map({
-                "ComparisonPage[selectedCountries.map() > buildingBlocks.map()]": (bb_5)=>{
-                    const score = c_5.buildingBlocks[bb_5.id].score;
+                "ComparisonPage[appliedCountries.map() > buildingBlocks.map()]": (bb_8)=>{
+                    const score = c_8.buildingBlocks[bb_8.id].score;
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-center px-3 py-3 font-semibold font-mono-data", (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getScoreColor"])(score)),
-                        children: score
-                    }, bb_5.id, false, {
+                        className: "px-4 py-3.5 text-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("px-2.5 py-1 rounded text-xs font-semibold font-mono-data", (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getScoreColor"])(score)),
+                            children: score
+                        }, void 0, false, {
+                            fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
+                            lineNumber: 640,
+                            columnNumber: 85
+                        }, this)
+                    }, `${bb_8.id}-${c_8.id}`, false, {
                         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-                        lineNumber: 312,
+                        lineNumber: 640,
                         columnNumber: 16
                     }, this);
                 }
-            }["ComparisonPage[selectedCountries.map() > buildingBlocks.map()]"])
+            }["ComparisonPage[appliedCountries.map() > buildingBlocks.map()]"])
         ]
-    }, c_5.id, true, {
+    }, c_8.id, true, {
         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-        lineNumber: 309,
+        lineNumber: 637,
         columnNumber: 10
     }, this);
 }
-function _ComparisonPageBuildingBlocksMap2(bb_4) {
+function _ComparisonPageBuildingBlocksMap2(bb_7) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-        className: "text-center px-3 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-400",
-        children: bb_4.name.split(" ")[0]
-    }, bb_4.id, false, {
+        className: "text-center px-4 py-4 text-[11px] font-semibold uppercase tracking-widest text-slate-400 whitespace-nowrap",
+        children: bb_7.name
+    }, bb_7.id, false, {
         fileName: "[project]/Developer/planetary-constellation/src/app/comparison/page.tsx",
-        lineNumber: 317,
+        lineNumber: 645,
         columnNumber: 10
     }, this);
 }
-function _ComparisonPageBuildingBlocksForEachScoresReduce2(a_1, b_1) {
-    return a_1.score < b_1.score ? a_1 : b_1;
+function _ComparisonPageAnonymous(a_2, b_4) {
+    return b_4.score - a_2.score;
 }
-function _ComparisonPageBuildingBlocksForEachScoresReduce(a_0, b_0) {
-    return a_0.score > b_0.score ? a_0 : b_0;
+function _ComparisonPageBuildingBlocksForEachScoresReduce2(a_1, b_2) {
+    return a_1.score < b_2.score ? a_1 : b_2;
 }
-function _ComparisonPageSelectedCountriesReduce(a, b) {
-    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(a.buildingBlocks) > (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(b.buildingBlocks) ? a : b;
+function _ComparisonPageBuildingBlocksForEachScoresReduce(a_0, b_1) {
+    return a_0.score > b_1.score ? a_0 : b_1;
 }
-function _ComparisonPageSelectedCountriesMap(c_0) {
+function _ComparisonPageAppliedCountriesReduce(a, b_0) {
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(a.buildingBlocks) > (0, __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["calculateOverallScore"])(b_0.buildingBlocks) ? a : b_0;
+}
+function _ComparisonPageAppliedCountriesMap(c_0) {
     return {
         name: c_0.name,
         values: __TURBOPACK__imported__module__$5b$project$5d2f$Developer$2f$planetary$2d$constellation$2f$src$2f$data$2f$indicators$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["buildingBlocks"].map({
-            "ComparisonPage[selectedCountries.map() > buildingBlocks.map()]": (bb_0)=>c_0.buildingBlocks[bb_0.id].score
-        }["ComparisonPage[selectedCountries.map() > buildingBlocks.map()]"])
+            "ComparisonPage[appliedCountries.map() > buildingBlocks.map()]": (bb_0)=>c_0.buildingBlocks[bb_0.id].score
+        }["ComparisonPage[appliedCountries.map() > buildingBlocks.map()]"])
     };
 }
 function _ComparisonPageBuildingBlocksMap(bb) {
