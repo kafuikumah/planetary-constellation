@@ -13,6 +13,8 @@ import Link from 'next/link';
 
 import { PageLayout } from '@/components/layout/PageLayout';
 import { CountrySidebar } from '@/components/layout/CountrySidebar';
+import { useOnboarding, TourStep } from '@/components/onboarding/OnboardingProvider';
+import { useEffect } from 'react';
 
 export default function CountryProfilePage() {
     const params = useParams();
@@ -28,6 +30,37 @@ export default function CountryProfilePage() {
         openModal,
         setOpenModal,
     } = useCountryProfile(id);
+
+    const { startTour } = useOnboarding();
+
+    useEffect(() => {
+        const hasSeenDetailTour = localStorage.getItem('tour_country_detail_seen');
+        if (hasSeenDetailTour === 'true') return;
+
+        const tourSteps: TourStep[] = [
+            {
+                targetId: 'profile-header-section',
+                title: 'Country Overview',
+                content: 'This header gives you a quick snapshot of the overall score, rank, and population of the country.',
+                placement: 'bottom'
+            },
+            {
+                targetId: 'blocks-performance',
+                title: 'Building Blocks',
+                content: 'Click on any of the 6 WHO building blocks to see a detailed breakdown of the indicators that contribute to that score.',
+                placement: 'top'
+            },
+            {
+                targetId: 'policy-framework',
+                title: 'Policies & Frameworks',
+                content: 'Detailed information about the institutional and economic policies of the country are listed here.',
+                placement: 'top'
+            }
+        ];
+
+        startTour(tourSteps);
+        localStorage.setItem('tour_country_detail_seen', 'true');
+    }, [startTour]);
 
     const allCountries = getAllCountriesAlphabetical();
 
@@ -66,12 +99,14 @@ export default function CountryProfilePage() {
                 <div className="flex-1 overflow-y-auto w-full">
 
                     {/* Section A: Header */}
-                    <CountryProfileHeader
-                        country={country}
-                        overallScore={overallScore}
-                        rank={rank}
-                        onScoreClick={() => setOpenModal('scoreBreakdown')}
-                    />
+                    <div id="profile-header-section">
+                        <CountryProfileHeader
+                            country={country}
+                            overallScore={overallScore}
+                            rank={rank}
+                            onScoreClick={() => setOpenModal('scoreBreakdown')}
+                        />
+                    </div>
 
                     <div className="max-w-6xl mx-auto px-6 py-8 space-y-8">
 
@@ -84,7 +119,7 @@ export default function CountryProfilePage() {
                         )}
 
                         {/* Section C: Building Blocks Grid */}
-                        <section>
+                        <section id="blocks-performance">
                             <h2 className="text-lg font-bold font-heading text-slate-900 mb-5 pl-1 border-l-4 border-[#F29D38]">
                                 WHO 6 Building Blocks Performance
                             </h2>
@@ -114,7 +149,7 @@ export default function CountryProfilePage() {
                         </section>
 
                         {/* Section D: Policy Accordion */}
-                        <section>
+                        <section id="policy-framework">
                             <PolicyAccordion policies={policies} />
                         </section>
                     </div>

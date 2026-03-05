@@ -21,9 +21,9 @@ export function CountrySidebar({ selectedCountry, onCountrySelect }: CountrySide
     const handleSelect = onCountrySelect || contextSetSelectedId;
 
     return (
-        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full overflow-hidden">
+        <aside id="sidebar-container" className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full overflow-hidden">
             {/* Search */}
-            <div className="p-4 border-b border-slate-100 flex-shrink-0">
+            <div id="sidebar-search" className="p-4 border-b border-slate-100 flex-shrink-0">
                 <div className="relative">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                     <input
@@ -38,7 +38,7 @@ export function CountrySidebar({ selectedCountry, onCountrySelect }: CountrySide
             </div>
 
             {/* Country list */}
-            <div className="flex-1 overflow-y-auto">
+            <div id="sidebar-list" className="flex-1 overflow-y-auto">
                 <div className="p-2 space-y-0.5">
                     {filtered.map((country) => (
                         <button

@@ -10,6 +10,8 @@ import { formatPopulation, formatPercent, formatCurrency, calculateOverallScore,
 import { LayoutGrid, List, ChevronRight, Search, Globe, AlertCircle, Building2 } from 'lucide-react';
 import { Country } from '@/types/country';
 import { PageLayout } from '@/components/layout/PageLayout';
+import { useOnboarding, TourStep } from '@/components/onboarding/OnboardingProvider';
+import { useEffect } from 'react';
 
 const REGIONS = ['All Regions', 'North Africa', 'West Africa', 'Central Africa', 'East Africa', 'Southern Africa'];
 const INCOMES = ['All Income Levels', 'Low', 'Lower-middle', 'Upper-middle', 'High'];
@@ -19,8 +21,33 @@ export default function CountryProfilesPage() {
     const { query, setQuery, region, setRegion, incomeLevel, setIncomeLevel, filtered } = useCountryFilter(allCountries);
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+    const { startTour } = useOnboarding();
+
+    useEffect(() => {
+        const hasSeenProfilesTour = localStorage.getItem('tour_profiles_seen');
+        if (hasSeenProfilesTour === 'true') return;
+
+        const tourSteps: TourStep[] = [
+            {
+                targetId: 'profiles-sidebar',
+                title: 'Data Explorer',
+                content: 'Use these filters to find countries by name, region, or income level.',
+                placement: 'right'
+            },
+            {
+                targetId: 'view-controls',
+                title: 'Switch Views',
+                content: 'Toggle between a visual grid or a detailed list view for easier data scanning.',
+                placement: 'bottom'
+            }
+        ];
+
+        startTour(tourSteps);
+        localStorage.setItem('tour_profiles_seen', 'true');
+    }, [startTour]);
+
     const sidebar = (
-        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 overflow-y-auto">
+        <aside id="profiles-sidebar" className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 overflow-y-auto">
             <h2 className="text-sm font-bold text-slate-900 mb-4">Filters</h2>
 
             <div className="space-y-4">
@@ -82,7 +109,7 @@ export default function CountryProfilesPage() {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
+                    <div id="view-controls" className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
                         <button
                             onClick={() => setViewMode('grid')}
                             className={`p-1.5 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-white shadow-sm text-[#F29D38]' : 'text-slate-400 hover:text-slate-600'}`}
