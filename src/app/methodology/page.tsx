@@ -22,41 +22,9 @@ const dataSources = [
 
 import { PageLayout } from '@/components/layout/PageLayout';
 import { Search } from 'lucide-react';
-import { useOnboarding, TourStep } from '@/components/onboarding/OnboardingProvider';
 
 export default function MethodologyPage() {
     const [activeSection, setActiveSection] = useState('who-framework');
-
-    const { startTour } = useOnboarding();
-
-    useEffect(() => {
-        const hasSeenMethodologyTour = localStorage.getItem('tour_methodology_seen');
-        if (hasSeenMethodologyTour === 'true') return;
-
-        const tourSteps: TourStep[] = [
-            {
-                targetId: 'methodology-sidebar',
-                title: 'Table of Contents',
-                content: 'Navigate through different sections of our methodology using this sidebar.',
-                placement: 'right'
-            },
-            {
-                targetId: 'scoring',
-                title: 'Scoring Logic',
-                content: 'Understand how we calculate the scores and what the different color codes mean.',
-                placement: 'top'
-            },
-            {
-                targetId: 'data-sources',
-                title: 'Verified Sources',
-                content: 'We use data from reputable international organizations like the WHO and World Bank.',
-                placement: 'top'
-            }
-        ];
-
-        startTour(tourSteps);
-        localStorage.setItem('tour_methodology_seen', 'true');
-    }, [startTour]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -83,7 +51,7 @@ export default function MethodologyPage() {
         activeSection === id ? `${linkBaseClass} bg-[#F29D38]/10 text-[#F29D38]` : `${linkBaseClass} text-slate-600 hover:bg-slate-50 hover:text-slate-900`;
 
     const sidebar = (
-        <aside id="methodology-sidebar" className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full overflow-hidden">
+        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full overflow-hidden">
             <div className="p-4 border-b border-slate-100 flex-shrink-0">
                 <div className="relative">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />

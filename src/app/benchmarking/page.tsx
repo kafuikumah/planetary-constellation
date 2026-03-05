@@ -11,51 +11,12 @@ import { calculateOverallScore, cn, getScoreColor, formatRank, average } from '@
 import { REGIONS } from '@/lib/constants';
 import { Country } from '@/types/country';
 import { PageLayout } from '@/components/layout/PageLayout';
-import { useOnboarding, TourStep } from '@/components/onboarding/OnboardingProvider';
-import { useEffect } from 'react';
 
 const allCountries = getAllCountriesAlphabetical();
 
 export default function BenchmarkingPage() {
     const [selectedCountryId, setSelectedCountryId] = useState('nga');
     const [peerGroup, setPeerGroup] = useState<string>('region');
-
-    const { startTour } = useOnboarding();
-
-    useEffect(() => {
-        const hasSeenBenchmarkingTour = localStorage.getItem('tour_benchmarking_seen');
-        if (hasSeenBenchmarkingTour === 'true') return;
-
-        const tourSteps: TourStep[] = [
-            {
-                targetId: 'benchmarking-sidebar',
-                title: 'Analytics Setup',
-                content: 'Choose a focus country and a peer group to start your deep-dive analysis.',
-                placement: 'right'
-            },
-            {
-                targetId: 'score-summary',
-                title: 'Performance Snapshot',
-                content: 'See where your selected country stands compared to others in Africa and its specific peer group.',
-                placement: 'bottom'
-            },
-            {
-                targetId: 'benchmarking-radar',
-                title: 'Multi-indicator Comparison',
-                content: 'This radar chart overlays the selected country scores against the peer group average across all 6 building blocks.',
-                placement: 'left'
-            },
-            {
-                targetId: 'gap-analysis',
-                title: 'Identifying Gaps',
-                content: 'The gap analysis shows exactly where the country is outperforming or lagging behind its peers.',
-                placement: 'top'
-            }
-        ];
-
-        startTour(tourSteps);
-        localStorage.setItem('tour_benchmarking_seen', 'true');
-    }, [startTour]);
 
     const selectedCountry = allCountries.find(c => c.id === selectedCountryId);
 
@@ -112,7 +73,7 @@ export default function BenchmarkingPage() {
     if (!selectedCountry) return null;
 
     const sidebar = (
-        <aside id="benchmarking-sidebar" className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 overflow-y-auto">
+        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 overflow-y-auto">
             <h2 className="text-sm font-bold text-slate-900 mb-4">Configuration</h2>
 
             <div className="space-y-4">
@@ -158,7 +119,7 @@ export default function BenchmarkingPage() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Scorecard */}
-                    <div id="score-summary" className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
                         <div className="flex items-center gap-3 mb-4">
                             <CountryFlag code={selectedCountry.code} name={selectedCountry.name} size="lg" />
                             <div>
@@ -182,7 +143,7 @@ export default function BenchmarkingPage() {
                     </div>
 
                     {/* Radar Chart */}
-                    <div id="benchmarking-radar" className="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
                         <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
                             {selectedCountry.name} vs Peer Average
                         </p>
@@ -220,7 +181,7 @@ export default function BenchmarkingPage() {
                     </div>
 
                     {/* Gap Analysis */}
-                    <div id="gap-analysis" className="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-4">
                         <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-400 mb-3">Gap Analysis</p>
                         <div className="space-y-3">
                             {gapAnalysis.map(g => (

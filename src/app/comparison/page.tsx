@@ -12,8 +12,6 @@ import { ScoreBadge } from '@/components/shared/ScoreBadge';
 import { calculateOverallScore, cn, getScoreColor } from '@/lib/utils';
 import { PageLayout } from '@/components/layout/PageLayout';
 import { Check, X, BarChart2, Search, ChevronDown, BarChart3 } from 'lucide-react';
-import { useOnboarding, TourStep } from '@/components/onboarding/OnboardingProvider';
-import { useEffect } from 'react';
 
 const allCountries = getAllCountriesAlphabetical();
 
@@ -23,49 +21,6 @@ export default function ComparisonPage() {
     const { selectedIds, selectedCountries, toggleCountry, setSelectedIds } = useComparison();
     const [chartType, setChartType] = useState<ChartType>('radar');
     const [searchQuery, setSearchQuery] = useState('');
-
-    const { startTour } = useOnboarding();
-
-    useEffect(() => {
-        const hasSeenComparisonTour = localStorage.getItem('tour_comparison_seen');
-        if (hasSeenComparisonTour === 'true') return;
-
-        const tourSteps: TourStep[] = [
-            {
-                targetId: 'comparison-sidebar',
-                title: 'Comparison Settings',
-                content: 'Configure your comparison by selecting multiple countries and a specific health indicator.',
-                placement: 'right'
-            },
-            {
-                targetId: 'indicator-selector',
-                title: 'Choose Metrics',
-                content: 'You can compare all building blocks at once or focus on a single metric like Health Financing.',
-                placement: 'right'
-            },
-            {
-                targetId: 'generate-btn',
-                title: 'Visualize Data',
-                content: 'Click here to update the charts and table with your selected countries and indicators.',
-                placement: 'top'
-            },
-            {
-                targetId: 'chart-toggles',
-                title: 'View Modes',
-                content: 'Switch between Radar, Bar, and Line charts to see the data from different perspectives.',
-                placement: 'bottom'
-            },
-            {
-                targetId: 'detailed-breakdown',
-                title: 'Detailed Data',
-                content: 'Scroll down to see the raw numbers, ranking data, and specific scores in this table.',
-                placement: 'top'
-            }
-        ];
-
-        startTour(tourSteps);
-        localStorage.setItem('tour_comparison_seen', 'true');
-    }, [startTour]);
 
     // UI states for sidebar
     const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
@@ -172,7 +127,7 @@ export default function ComparisonPage() {
     };
 
     const sidebar = (
-        <aside id="comparison-sidebar" className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 gap-6 overflow-y-auto">
+        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 gap-6 overflow-y-auto">
 
             {/* Select Countries Dropdown */}
             <div className="flex flex-col gap-2 relative z-20">
@@ -241,7 +196,6 @@ export default function ComparisonPage() {
                 <label className="text-sm text-slate-600">Select Indicator</label>
                 <div className="relative">
                     <button
-                        id="indicator-selector"
                         onClick={() => setIsIndicatorDropdownOpen(!isIndicatorDropdownOpen)}
                         className="w-full flex items-center justify-between border border-slate-200 bg-slate-50/50 rounded-lg px-3 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500/30"
                     >
@@ -286,7 +240,6 @@ export default function ComparisonPage() {
 
             <div className="mt-auto pt-4 relative z-0">
                 <button
-                    id="generate-btn"
                     onClick={handleGenerate}
                     disabled={selectedCountries.length === 0}
                     className="w-full bg-[#F59E0B] hover:bg-[#D97706] disabled:bg-slate-200 disabled:text-slate-400 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:ring-offset-2"
@@ -310,7 +263,7 @@ export default function ComparisonPage() {
                     </div>
                     {/* Chart Type Toggle */}
                     {(appliedIndicator === 'all_building_blocks' || appliedIndicator === 'overall') && (
-                        <div id="chart-toggles" className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
+                        <div className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
                             {(['radar', 'bar', 'line'] as ChartType[]).map(t => (
                                 <button
                                     key={t}
@@ -326,7 +279,7 @@ export default function ComparisonPage() {
                         </div>
                     )}
                     {appliedIndicator !== 'all_building_blocks' && appliedIndicator !== 'overall' && (
-                        <div id="chart-toggles" className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
+                        <div className="flex bg-slate-100 p-1 rounded-lg self-start flex-shrink-0">
                             {(['bar', 'line'] as ChartType[]).map(t => (
                                 <button
                                     key={t}
@@ -397,7 +350,7 @@ export default function ComparisonPage() {
 
                     {/* Comparison Table */}
                     {appliedCountries.length > 0 && (
-                        <div id="detailed-breakdown">
+                        <div>
                             <h3 className="text-lg font-semibold text-slate-800 mb-4 px-1">Detailed Breakdown</h3>
                             <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                                 <div className="overflow-x-auto">

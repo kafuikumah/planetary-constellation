@@ -10,8 +10,6 @@ import { CountryFlag } from '@/components/shared/CountryFlag';
 import { cn, groupBy } from '@/lib/utils';
 import { Policy } from '@/types/policy';
 import { PageLayout } from '@/components/layout/PageLayout';
-import { useOnboarding, TourStep } from '@/components/onboarding/OnboardingProvider';
-import { useEffect } from 'react';
 
 type SubView = 'list' | 'coverage' | 'timeline';
 
@@ -23,37 +21,6 @@ export default function PoliciesPage() {
     const [countryFilter, setCountryFilter] = useState('');
     const [statusFilter, setStatusFilter] = useState('');
     const [blockFilter, setBlockFilter] = useState('');
-
-    const { startTour } = useOnboarding();
-
-    useEffect(() => {
-        const hasSeenPoliciesTour = localStorage.getItem('tour_policies_seen');
-        if (hasSeenPoliciesTour === 'true') return;
-
-        const tourSteps: TourStep[] = [
-            {
-                targetId: 'policies-sidebar',
-                title: 'Filter Policies',
-                content: 'Narrow down the policy list by country, building block, or status.',
-                placement: 'right'
-            },
-            {
-                targetId: 'policy-tabs',
-                title: 'Analysis Views',
-                content: 'Switch between a simple list, a coverage matrix, or a historical timeline of policies.',
-                placement: 'bottom'
-            },
-            {
-                targetId: 'policy-search',
-                title: 'Keywords',
-                content: 'Search for specific policy titles or keywords in the descriptions.',
-                placement: 'bottom'
-            }
-        ];
-
-        startTour(tourSteps);
-        localStorage.setItem('tour_policies_seen', 'true');
-    }, [startTour]);
 
     const filteredPolicies = useMemo(() => {
         let result = searchQuery ? searchPolicies(searchQuery) : [...policies];
@@ -79,7 +46,7 @@ export default function PoliciesPage() {
     }, []);
 
     const sidebar = (
-        <aside id="policies-sidebar" className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 overflow-y-auto">
+        <aside className="w-[280px] bg-white rounded-[10px] shadow-sm border border-slate-200 flex flex-col flex-shrink-0 h-full p-4 overflow-y-auto">
             <h2 className="text-sm font-bold text-slate-900 mb-4">Filters</h2>
 
             <div className="space-y-4">
@@ -143,7 +110,7 @@ export default function PoliciesPage() {
                 </div>
 
                 {/* Tab Views */}
-                <div id="policy-tabs" className="flex items-center gap-1 border-b border-slate-200">
+                <div className="flex items-center gap-1 border-b border-slate-200">
                     {([['list', 'Policy List'], ['coverage', 'Coverage Analysis'], ['timeline', 'Timeline']] as [SubView, string][]).map(([key, label]) => (
                         <button
                             key={key}
@@ -163,7 +130,7 @@ export default function PoliciesPage() {
                 {subView === 'list' && (
                     <>
                         {/* Search Main Body */}
-                        <div id="policy-search" className="flex flex-wrap items-center gap-3">
+                        <div className="flex flex-wrap items-center gap-3">
                             <div className="relative flex-1">
                                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                                 <input
